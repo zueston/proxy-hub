@@ -1,0 +1,26 @@
+# 依赖与内核（CI 自行下载）
+node_modules/
+bin/
+
+# 原始订阅（体积大，不入库）
+raw/
+
+# 中间结果（只提交最终产物）
+out/candidates.json
+out/tcp_alive.json
+out/validated.json
+out/dropped.json
+out/working.json
+out/working_prev.json
+out/retest_ok.json
+out/test_config.yaml
+out/mihomo_home/
+out/mihomo_home2/
+out/validate_home/
+out/final_check/
+out/*.log
+
+# 系统
+.DS_Store
+Thumbs.db
+*.tmp

@@ -1,0 +1,94 @@
+name: update-nodes
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # 每 6 小时
+  workflow_dispatch:        # 手动触发
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'out/**'
+      - 'raw/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-nodes
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install deps
+        run: npm install js-yaml --no-audit --no-fund
+
+      - name: Download mihomo (linux amd64)
+        run: |
+          set -e
+          mkdir -p bin
+          VER=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | grep -oP '"tag_name":\s*"\K[^"]+')
+          echo "mihomo $VER"
+          curl -sL -o /tmp/mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/${VER}/mihomo-linux-amd64-compatible-${VER}.gz" || \
+          curl -sL -o /tmp/mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/${VER}/mihomo-linux-amd64-${VER}.gz"
+          gunzip -f /tmp/mihomo.gz
+          mv /tmp/mihomo bin/mihomo
+          chmod +x bin/mihomo
+          ./bin/mihomo -v
+
+      - name: Collect subscriptions
+        run: |
+          bash scripts/collect.sh
+          bash scripts/collect2.sh || true
+
+      - name: Parse nodes
+        run: node scripts/parse.js
+
+      - name: TCP prefilter
+        run: TCP_CONC=400 TCP_TIMEOUT=4000 node scripts/tcp_test.js
+
+      - name: Validate configs (drop illegal proxies)
+        run: MIHOMO_BIN=./bin/mihomo node scripts/validate_config.js
+
+      - name: Real proxy test
+        env:
+          MIHOMO_BIN: ./bin/mihomo
+        run: CONC=100 DELAY_TIMEOUT=6000 node scripts/real_test.js
+
+      - name: Retest failures
+        env:
+          MIHOMO_BIN: ./bin/mihomo
+        run: CONC=80 DELAY_TIMEOUT=10000 node scripts/retest.js || true
+
+      - name: Finalize artifacts
+        run: LIMIT=800 MAX_DELAY=4000 node scripts/finalize.js
+
+      - name: Render README stats
+        run: node scripts/readme.js
+
+      - name: Cleanup raw
+        run: rm -rf raw/* out/mihomo_home out/mihomo_home2 out/validate_home out/final_check out/test_config.yaml bin || true
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore: auto update $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
