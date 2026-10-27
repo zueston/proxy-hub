@@ -12,13 +12,17 @@ out/validated.json
 out/dropped.json
 out/working.json
 out/working_prev.json
+out/working_verified.json
 out/retest_ok.json
 out/test_config.yaml
 out/mihomo_home/
 out/mihomo_home2/
 out/validate_home/
+out/verify_home/
 out/final_check/
 out/*.log
+out/*_home/
+out/*.db
 
 # 系统
 .DS_Store
