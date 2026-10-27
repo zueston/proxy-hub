@@ -72,14 +72,19 @@ jobs:
           MIHOMO_BIN: ./bin/mihomo
         run: CONC=80 DELAY_TIMEOUT=10000 node scripts/retest.js || true
 
+      - name: Verify end-to-end (google / youtube)
+        env:
+          MIHOMO_BIN: ./bin/mihomo
+        run: CONC=40 DELAY_TIMEOUT=8000 node scripts/verify.js || true
+
       - name: Finalize artifacts
-        run: LIMIT=800 MAX_DELAY=4000 node scripts/finalize.js
+        run: LIMIT=800 MAX_DELAY=8000 node scripts/finalize.js
 
       - name: Render README stats
         run: node scripts/readme.js
 
       - name: Cleanup raw
-        run: rm -rf raw/* out/mihomo_home out/mihomo_home2 out/validate_home out/final_check out/test_config.yaml bin || true
+        run: rm -rf raw/* out/mihomo_home out/mihomo_home2 out/validate_home out/verify_home out/final_check out/test_config.yaml bin || true
 
       - name: Commit & push
         run: |

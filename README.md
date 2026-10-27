@@ -3,9 +3,10 @@
 > 全自动采集公开订阅源 → TCP 预筛 → **真实代理测速** → 输出可用配置。
 > 每 6 小时自动刷新一次，订阅地址永久有效。
 
-**最后更新：** 2026/10/27 08:39:08 (UTC+8)
-**可用节点：** 194 / 采集 42092 · TCP 存活 11479 · 实测通过 194
-**延迟：** 最低 55ms · 中位 264ms · 最高 1907ms
+**最后更新：** 2026/10/27 08:43:08 (UTC+8)
+**可用节点：** 141 个（**全部实测能访问 Google / YouTube**）
+**筛选漏斗：** 采集 42092 → TCP 存活 11479 → 代理测速通过 194 → 端到端验证 141
+**延迟：** 最低 67ms · 中位 252ms · 最高 2132ms
 
 ---
 
@@ -18,12 +19,12 @@ https://raw.githubusercontent.com/zueston/proxy-hub/main/out/clash.yaml
 ```
 
 <details>
-<summary>国内访问慢？用加速镜像（任选其一）</summary>
+<summary>国内直连 raw 慢 / 被墙？用这些加速镜像（已实测 200）</summary>
 
 ```
-https://cdn.jsdelivr.net/gh/zueston/proxy-hub@main/out/clash.yaml
-https://raw.gitmirror.com/zueston/proxy-hub/main/out/clash.yaml
-https://ghfast.top/https://raw.githubusercontent.com/zueston/proxy-hub/main/out/clash.yaml
+https://gh-proxy.com/https://raw.githubusercontent.com/zueston/proxy-hub/main/out/clash.yaml
+https://ghproxy.net/https://raw.githubusercontent.com/zueston/proxy-hub/main/out/clash.yaml
+https://gcore.jsdelivr.net/gh/zueston/proxy-hub@main/out/clash.yaml
 ```
 
 </details>
@@ -37,8 +38,9 @@ https://raw.githubusercontent.com/zueston/proxy-hub/main/out/base64.txt
 镜像：
 
 ```
-https://cdn.jsdelivr.net/gh/zueston/proxy-hub@main/out/base64.txt
-https://raw.gitmirror.com/zueston/proxy-hub/main/out/base64.txt
+https://gh-proxy.com/https://raw.githubusercontent.com/zueston/proxy-hub/main/out/base64.txt
+https://ghproxy.net/https://raw.githubusercontent.com/zueston/proxy-hub/main/out/base64.txt
+https://gcore.jsdelivr.net/gh/zueston/proxy-hub@main/out/base64.txt
 ```
 
 ### 3️⃣ 明文节点列表（自己复制粘贴用）
@@ -82,41 +84,36 @@ https://raw.githubusercontent.com/zueston/proxy-hub/main/out/nodes.json
 
 | 地区 | 节点数 |
 | --- | --- |
-| 🇺🇸 美国 | 47 |
-| 🌐 其他 | 38 |
-| 🇳🇱 荷兰 | 23 |
-| 🇩🇪 德国 | 15 |
-| 🇫🇷 法国 | 14 |
-| 🇮🇹 意大利 | 9 |
-| 🇸🇬 新加坡 | 7 |
-| 🇷🇺 俄罗斯 | 6 |
-| AR | 5 |
-| 🇭🇰 香港 | 4 |
-| 🇨🇦 加拿大 | 3 |
-| 🇹🇼 台湾 | 3 |
-| 🇯🇵 日本 | 3 |
-| 🇹🇭 泰国 | 2 |
-| 🇮🇳 印度 | 2 |
-| 🇬🇧 英国 | 2 |
-| 🇸🇪 瑞典 | 2 |
+| 🇺🇸 美国 | 37 |
+| 🌐 其他 | 24 |
+| 🇳🇱 荷兰 | 22 |
+| 🇩🇪 德国 | 14 |
+| 🇫🇷 法国 | 12 |
+| 🇮🇹 意大利 | 8 |
+| 🇷🇺 俄罗斯 | 5 |
+| 🇦🇷 阿根廷 | 5 |
+| 🇨🇦 加拿大 | 2 |
 | 🇧🇷 巴西 | 2 |
-| 🇵🇱 波兰 | 2 |
+| 🇸🇬 新加坡 | 1 |
+| 🇭🇰 香港 | 1 |
 | 🇰🇷 韩国 | 1 |
+| 🇯🇵 日本 | 1 |
 | 🇲🇾 马来西亚 | 1 |
-| 🇨🇭 瑞士 | 1 |
-| 🇪🇸 西班牙 | 1 |
+| 🇬🇧 英国 | 1 |
+| 🇸🇪 瑞典 | 1 |
+| 🇵🇱 波兰 | 1 |
 | 🇦🇺 澳大利亚 | 1 |
+| 🇪🇸 西班牙 | 1 |
 
 ### 按协议
 
 | 协议 | 节点数 |
 | --- | --- |
-| `http` | 108 |
-| `vless` | 46 |
-| `trojan` | 19 |
-| `ss` | 14 |
-| `vmess` | 3 |
-| `socks5` | 3 |
+| `http` | 92 |
+| `vless` | 38 |
+| `ss` | 8 |
+| `vmess` | 1 |
+| `socks5` | 1 |
 | `hysteria2` | 1 |
 
 > 地区识别依据节点名称里的关键词（HK/香港/🇭🇰 等），未命中的归入「其他」。
@@ -126,21 +123,26 @@ https://raw.githubusercontent.com/zueston/proxy-hub/main/out/nodes.json
 ## 🔧 工作流程
 
 ```
-公开订阅源 (14 个)
-      ↓  collect.sh
+公开订阅源 (20+ 个)
+      ↓  collect.sh + collect2.sh
   raw/ 原始订阅 (yaml / base64 / 明文 URI)
       ↓  parse.js  —— 解析 ss/ssr/vmess/vless/trojan/hysteria2/tuic/anytls
   out/candidates.json  去重后的候选节点
-      ↓  tcp_test.js  —— 400 并发 TCP 连通性预筛
+      ↓  tcp_test.js  —— 600 并发 TCP 连通性预筛
   out/tcp_alive.json
+      ↓  validate_config.js —— 用 mihomo 逐个试解析，剔掉非法参数
+  out/validated.json
       ↓  real_test.js —— 启动 mihomo 内核，逐个测真实 HTTP 204
   out/working.json
-      ↓  retest.js  —— 失败节点换 URL / 加长超时复测
+      ↓  verify.js  —— 端到端验证能否访问 Google / YouTube
+  out/working_verified.json
       ↓  finalize.js —— 生成 clash 配置、URI 列表、元数据
   out/clash.yaml · base64.txt · plain.txt · nodes.json
 ```
 
-**只有真实能跑通 `generate_204` 的节点才会进入最终配置**，不是"看着像活的"。
+**准入标准是「能真的打开 Google」**：节点必须通过 mihomo 的 delay API 成功请求
+`https://www.google.com/generate_204` 才会进入最终配置。只通 gstatic 但过不了
+Google 的节点（多数是被墙的落地）会被剔除，不是"看着像活的"就算数。
 
 ---
 

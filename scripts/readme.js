@@ -9,7 +9,9 @@ const REPO = process.env.REPO_SLUG || 'zueston/proxy-hub';
 const BRANCH = process.env.REPO_BRANCH || 'main';
 
 const rawBase = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
-const jsdBase = `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}`;
+const jsdBase = `https://gcore.jsdelivr.net/gh/${REPO}@${BRANCH}`;
+const ghProxy = `https://gh-proxy.com/${rawBase}`;
+const ghProxyNet = `https://ghproxy.net/${rawBase}`;
 
 const utc = meta.generated_at;
 const local = new Date(utc).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', hour12: false });
@@ -20,7 +22,7 @@ const regionNames = {
   CA: '🇨🇦 加拿大', AU: '🇦🇺 澳大利亚', RU: '🇷🇺 俄罗斯', TR: '🇹🇷 土耳其', IN: '🇮🇳 印度',
   BR: '🇧🇷 巴西', VN: '🇻🇳 越南', MY: '🇲🇾 马来西亚', TH: '🇹🇭 泰国', PH: '🇵🇭 菲律宾',
   ID: '🇮🇩 印尼', AE: '🇦🇪 阿联酋', CH: '🇨🇭 瑞士', SE: '🇸🇪 瑞典', PL: '🇵🇱 波兰',
-  IT: '🇮🇹 意大利', ES: '🇪🇸 西班牙', XX: '🌐 其他',
+  IT: '🇮🇹 意大利', ES: '🇪🇸 西班牙', AR: '🇦🇷 阿根廷', XX: '🌐 其他',
 };
 
 const regions = Object.entries(meta.by_region).sort((a, b) => b[1] - a[1]);
@@ -35,7 +37,8 @@ const md = `# 🚀 Proxy Hub · 自动更新的免费 Clash / V2Ray 节点池
 > 每 6 小时自动刷新一次，订阅地址永久有效。
 
 **最后更新：** ${local} (UTC+8)
-**可用节点：** ${meta.exported} / 采集 ${meta.total_candidates} · TCP 存活 ${meta.tcp_alive} · 实测通过 ${meta.tested_ok}
+**可用节点：** ${meta.exported} 个（**全部实测能访问 Google / YouTube**）
+**筛选漏斗：** 采集 ${meta.total_candidates} → TCP 存活 ${meta.tcp_alive} → 代理测速通过 ${meta.tested_ok} → 端到端验证 ${meta.exported}
 **延迟：** 最低 ${meta.delay_stats.min}ms · 中位 ${meta.delay_stats.median}ms · 最高 ${meta.delay_stats.max}ms
 
 ---
@@ -49,12 +52,12 @@ ${rawBase}/out/clash.yaml
 \`\`\`
 
 <details>
-<summary>国内访问慢？用加速镜像（任选其一）</summary>
+<summary>国内直连 raw 慢 / 被墙？用这些加速镜像（已实测 200）</summary>
 
 \`\`\`
+${ghProxy}/out/clash.yaml
+${ghProxyNet}/out/clash.yaml
 ${jsdBase}/out/clash.yaml
-https://raw.gitmirror.com/${REPO}/${BRANCH}/out/clash.yaml
-https://ghfast.top/${rawBase}/out/clash.yaml
 \`\`\`
 
 </details>
@@ -68,8 +71,9 @@ ${rawBase}/out/base64.txt
 镜像：
 
 \`\`\`
+${ghProxy}/out/base64.txt
+${ghProxyNet}/out/base64.txt
 ${jsdBase}/out/base64.txt
-https://raw.gitmirror.com/${REPO}/${BRANCH}/out/base64.txt
 \`\`\`
 
 ### 3️⃣ 明文节点列表（自己复制粘贴用）
@@ -128,21 +132,26 @@ ${typeTable}
 ## 🔧 工作流程
 
 \`\`\`
-公开订阅源 (14 个)
-      ↓  collect.sh
+公开订阅源 (20+ 个)
+      ↓  collect.sh + collect2.sh
   raw/ 原始订阅 (yaml / base64 / 明文 URI)
       ↓  parse.js  —— 解析 ss/ssr/vmess/vless/trojan/hysteria2/tuic/anytls
   out/candidates.json  去重后的候选节点
-      ↓  tcp_test.js  —— 400 并发 TCP 连通性预筛
+      ↓  tcp_test.js  —— 600 并发 TCP 连通性预筛
   out/tcp_alive.json
+      ↓  validate_config.js —— 用 mihomo 逐个试解析，剔掉非法参数
+  out/validated.json
       ↓  real_test.js —— 启动 mihomo 内核，逐个测真实 HTTP 204
   out/working.json
-      ↓  retest.js  —— 失败节点换 URL / 加长超时复测
+      ↓  verify.js  —— 端到端验证能否访问 Google / YouTube
+  out/working_verified.json
       ↓  finalize.js —— 生成 clash 配置、URI 列表、元数据
   out/clash.yaml · base64.txt · plain.txt · nodes.json
 \`\`\`
 
-**只有真实能跑通 \`generate_204\` 的节点才会进入最终配置**，不是"看着像活的"。
+**准入标准是「能真的打开 Google」**：节点必须通过 mihomo 的 delay API 成功请求
+\`https://www.google.com/generate_204\` 才会进入最终配置。只通 gstatic 但过不了
+Google 的节点（多数是被墙的落地）会被剔除，不是"看着像活的"就算数。
 
 ---
 

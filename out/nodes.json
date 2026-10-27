@@ -1,153 +1,99 @@
 {
- "generated_at": "2026-10-27T00:39:08.692Z",
+ "generated_at": "2026-10-27T00:43:08.247Z",
+ "admission": "node must pass https://www.google.com/generate_204 through mihomo before export",
  "total_candidates": 42092,
  "tcp_alive": 11479,
  "tested_ok": 194,
- "exported": 194,
+ "google_verified": 141,
+ "youtube_verified": 137,
+ "exported": 141,
  "by_type": {
-  "vmess": 3,
-  "http": 108,
-  "vless": 46,
-  "socks5": 3,
-  "trojan": 19,
+  "http": 92,
+  "vless": 38,
+  "vmess": 1,
+  "socks5": 1,
   "hysteria2": 1,
-  "ss": 14
+  "ss": 8
  },
  "by_region": {
-  "XX": 38,
-  "TH": 2,
-  "US": 47,
-  "SG": 7,
-  "HK": 4,
+  "SG": 1,
+  "XX": 24,
+  "US": 37,
+  "HK": 1,
   "KR": 1,
-  "IN": 2,
-  "FR": 14,
-  "CA": 3,
-  "TW": 3,
-  "JP": 3,
-  "RU": 6,
-  "UK": 2,
+  "FR": 12,
+  "JP": 1,
   "MY": 1,
-  "NL": 23,
-  "IT": 9,
-  "DE": 15,
+  "CA": 2,
+  "RU": 5,
+  "UK": 1,
+  "NL": 22,
+  "DE": 14,
+  "IT": 8,
   "AR": 5,
-  "CH": 1,
-  "SE": 2,
+  "SE": 1,
   "BR": 2,
-  "PL": 2,
-  "ES": 1,
-  "AU": 1
+  "PL": 1,
+  "AU": 1,
+  "ES": 1
  },
  "delay_stats": {
-  "min": 55,
-  "median": 264,
-  "max": 1907
+  "min": 67,
+  "median": 252,
+  "max": 2132
  },
  "nodes": [
-  {
-   "name": "XX-001 CN @Raydikalx A1B995",
-   "type": "vmess",
-   "server": "112.132.215.108",
-   "port": 50002,
-   "region": "XX",
-   "delay_ms": 55
-  },
-  {
-   "name": "TH-001 Other_15 887KB/s R002-260618 [b220905f4ba2]",
-   "type": "http",
-   "server": "104.248.151.93",
-   "port": 9090,
-   "region": "TH",
-   "delay_ms": 68
-  },
-  {
-   "name": "US-001 美国_102704708",
-   "type": "vless",
-   "server": "165.245.181.78",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 70
-  },
-  {
-   "name": "XX-002 CN @Raydikalx 8665EC",
-   "type": "vmess",
-   "server": "39.108.113.127",
-   "port": 10086,
-   "region": "XX",
-   "delay_ms": 71
-  },
   {
    "name": "SG-001 SG_71 569KB/s R002-260618 [c20f0bad12dd]",
    "type": "http",
    "server": "43.160.239.37",
    "port": 443,
    "region": "SG",
-   "delay_ms": 73
+   "delay_ms": 67,
+   "verify": {
+    "gstatic": 72,
+    "google": 67,
+    "yt": 75
+   }
   },
   {
-   "name": "HK-001 HK_1 4.4MB/s",
-   "type": "http",
-   "server": "118.25.131.160",
-   "port": 10007,
-   "region": "HK",
-   "delay_ms": 74
-  },
-  {
-   "name": "SG-002 SG_64 880KB/s R002-260618 [5d050ba112ef]",
-   "type": "http",
-   "server": "167.172.76.176",
-   "port": 9090,
-   "region": "SG",
-   "delay_ms": 79
-  },
-  {
-   "name": "SG-003 SG_66 330KB/s R002-260618 [7592b0b196e4]",
-   "type": "http",
-   "server": "128.199.121.61",
-   "port": 9090,
-   "region": "SG",
-   "delay_ms": 81
-  },
-  {
-   "name": "XX-003 EPODONIOS",
+   "name": "XX-001 EPODONIOS",
    "type": "vless",
    "server": "45.154.26.63",
    "port": 443,
    "region": "XX",
-   "delay_ms": 88
+   "delay_ms": 81,
+   "verify": {
+    "gstatic": 87,
+    "google": 81,
+    "yt": 97
+   }
   },
   {
-   "name": "US-002 US美国(mibei77.com 米贝节点分享)_10",
+   "name": "US-001 US美国(mibei77.com 米贝节点分享)_10",
    "type": "vless",
    "server": "43.174.195.1",
    "port": 443,
    "region": "US",
-   "delay_ms": 90
+   "delay_ms": 95,
+   "verify": {
+    "gstatic": 93,
+    "google": 95,
+    "yt": 85
+   }
   },
   {
-   "name": "HK-002 HK @Raydikalx 6A0ADC",
+   "name": "HK-001 HK @Raydikalx 6A0ADC",
    "type": "vmess",
    "server": "156.239.224.107",
    "port": 57278,
    "region": "HK",
-   "delay_ms": 100
-  },
-  {
-   "name": "SG-004 SG_51 514KB/s K001-260618 [c0fb7b7d8f10]",
-   "type": "http",
-   "server": "54.151.242.187",
-   "port": 2080,
-   "region": "SG",
-   "delay_ms": 110
-  },
-  {
-   "name": "SG-005 SG_101 453KB/s [56eaebb9d5cd]",
-   "type": "http",
-   "server": "13.229.57.163",
-   "port": 2080,
-   "region": "SG",
-   "delay_ms": 118
+   "delay_ms": 111,
+   "verify": {
+    "gstatic": 108,
+    "google": 111,
+    "yt": 112
+   }
   },
   {
    "name": "KR-001 KR²_1 0.7MB/s GPT X History [453f7315c21e]",
@@ -155,55 +101,37 @@
    "server": "121.169.46.116",
    "port": 1090,
    "region": "KR",
-   "delay_ms": 119
+   "delay_ms": 114,
+   "verify": {
+    "gstatic": 113,
+    "google": 114
+   }
   },
   {
-   "name": "US-003 US_382 229KB/s R002-260618 [793850fdf18c]",
-   "type": "http",
-   "server": "154.26.192.123",
-   "port": 10988,
-   "region": "US",
-   "delay_ms": 161
-  },
-  {
-   "name": "US-004 US_257 200KB/s R002-260618 [1fc116c439cd]",
-   "type": "http",
-   "server": "137.175.22.116",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 166
-  },
-  {
-   "name": "XX-004 CF中转_1027047273",
-   "type": "vless",
-   "server": "104.19.47.188",
-   "port": 8443,
-   "region": "XX",
-   "delay_ms": 166
-  },
-  {
-   "name": "US-005 US_271 185KB/s R002-260618 [d8d0f16380f5]",
-   "type": "http",
-   "server": "137.175.22.52",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 167
-  },
-  {
-   "name": "US-006 US_45 216KB/s R002-260618 [39215ca34ddc]",
+   "name": "US-002 US_45 216KB/s R002-260618 [39215ca34ddc]",
    "type": "http",
    "server": "137.175.22.72",
    "port": 443,
    "region": "US",
-   "delay_ms": 169
+   "delay_ms": 163,
+   "verify": {
+    "gstatic": 169,
+    "google": 163,
+    "yt": 168
+   }
   },
   {
-   "name": "IN-001 IN_7 548KB/s R002-260618 [4c2bac9eb305]",
+   "name": "US-003 US_257 200KB/s R002-260618 [1fc116c439cd]",
    "type": "http",
-   "server": "110.173.188.221",
+   "server": "137.175.22.116",
    "port": 443,
-   "region": "IN",
-   "delay_ms": 170
+   "region": "US",
+   "delay_ms": 166,
+   "verify": {
+    "gstatic": 172,
+    "google": 166,
+    "yt": 169
+   }
   },
   {
    "name": "FR-001 FR_83 1.2MB/s R002-260618 [5e89fefb461a]",
@@ -211,175 +139,64 @@
    "server": "104.18.1.1",
    "port": 2087,
    "region": "FR",
-   "delay_ms": 172
+   "delay_ms": 166,
+   "verify": {
+    "gstatic": 181,
+    "google": 166,
+    "yt": 173
+   }
   },
   {
-   "name": "US-007 US_372 156KB/s R002-260618 [5f9e954fe312]",
-   "type": "http",
-   "server": "137.175.22.56",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 174
-  },
-  {
-   "name": "HK-003 HK(AzadNet.t.me) (1)",
-   "type": "trojan",
-   "server": "103.235.46.40",
-   "port": 443,
-   "region": "HK",
-   "delay_ms": 178
-  },
-  {
-   "name": "US-008 US_228 160KB/s R002-260618 [22a5f322cb38]",
+   "name": "US-004 US_228 160KB/s R002-260618 [22a5f322cb38]",
    "type": "http",
    "server": "137.175.22.85",
    "port": 443,
    "region": "US",
-   "delay_ms": 180
+   "delay_ms": 167,
+   "verify": {
+    "gstatic": 171,
+    "google": 167,
+    "yt": 180
+   }
   },
   {
-   "name": "XX-005 罗马尼亚_102704021",
-   "type": "vless",
-   "server": "45.85.118.50",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 181
-  },
-  {
-   "name": "XX-006 未知丨yoyapai.com_58",
-   "type": "vless",
-   "server": "185.148.104.30",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 182
-  },
-  {
-   "name": "US-009 US_288 176KB/s R002-260618 [b4135a5f200b]",
+   "name": "US-005 US_271 185KB/s R002-260618 [d8d0f16380f5]",
    "type": "http",
-   "server": "137.175.22.98",
+   "server": "137.175.22.52",
    "port": 443,
    "region": "US",
-   "delay_ms": 182
+   "delay_ms": 170,
+   "verify": {
+    "gstatic": 168,
+    "google": 170,
+    "yt": 177
+   }
   },
   {
-   "name": "XX-007 亚美尼亚_102704006",
-   "type": "vless",
-   "server": "185.162.229.30",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 184
-  },
-  {
-   "name": "US-010 美国_102704619",
-   "type": "vless",
-   "server": "108.165.152.30",
-   "port": 8880,
-   "region": "US",
-   "delay_ms": 184
-  },
-  {
-   "name": "CA-001 CA加拿大丨yoyapai.com_1",
-   "type": "vless",
-   "server": "155.46.167.30",
-   "port": 8880,
-   "region": "CA",
-   "delay_ms": 186
-  },
-  {
-   "name": "FR-002 FR_47 7.5MB/s R002-260618 [39873ef4d996]",
+   "name": "US-006 US_372 156KB/s R002-260618 [5f9e954fe312]",
    "type": "http",
-   "server": "172.64.68.89",
+   "server": "137.175.22.56",
    "port": 443,
+   "region": "US",
+   "delay_ms": 170,
+   "verify": {
+    "gstatic": 161,
+    "google": 170,
+    "yt": 164
+   }
+  },
+  {
+   "name": "FR-002 FR法国丨yoyapai.com_5",
+   "type": "vless",
+   "server": "80.93.202.40",
+   "port": 8880,
    "region": "FR",
-   "delay_ms": 187
-  },
-  {
-   "name": "TW-001 TW(AzadNet.t.me) (5)",
-   "type": "trojan",
-   "server": "60.250.152.230",
-   "port": 3462,
-   "region": "TW",
-   "delay_ms": 188
-  },
-  {
-   "name": "US-011 US_473 105KB/s R002-260618 [713d9982d1a3]",
-   "type": "http",
-   "server": "137.175.22.88",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 189
-  },
-  {
-   "name": "XX-008 爱沙尼亚_102704014",
-   "type": "vless",
-   "server": "45.80.110.30",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 189
-  },
-  {
-   "name": "XX-009 立陶宛_102704011",
-   "type": "vless",
-   "server": "89.116.180.40",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 190
-  },
-  {
-   "name": "US-012 US丨yoyapai.com美国_2",
-   "type": "vless",
-   "server": "188.164.248.110",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 191
-  },
-  {
-   "name": "XX-010 立陶宛_102704013",
-   "type": "vless",
-   "server": "89.116.180.30",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 191
-  },
-  {
-   "name": "US-013 美国_1027043059",
-   "type": "vless",
-   "server": "198.177.56.30",
-   "port": 8880,
-   "region": "US",
-   "delay_ms": 191
-  },
-  {
-   "name": "US-014 US_277 713KB/s R002-260618 [4a813a8d418a]",
-   "type": "http",
-   "server": "54.190.176.228",
-   "port": 8443,
-   "region": "US",
-   "delay_ms": 192
-  },
-  {
-   "name": "XX-011 亚美尼亚_102704005",
-   "type": "vless",
-   "server": "185.162.229.50",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 195
-  },
-  {
-   "name": "US-015 US_226 559KB/s R002-260618 [49dd046d95fd]",
-   "type": "http",
-   "server": "44.248.167.117",
-   "port": 8443,
-   "region": "US",
-   "delay_ms": 196
-  },
-  {
-   "name": "US-016 美国_1027041489",
-   "type": "vless",
-   "server": "47.77.201.227",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 196
+   "delay_ms": 178,
+   "verify": {
+    "gstatic": 190,
+    "google": 178,
+    "yt": 192
+   }
   },
   {
    "name": "JP-001 JP_50 418KB/s P002-260618 [43c1eca10f42]",
@@ -387,47 +204,38 @@
    "server": "133.18.200.207",
    "port": 343,
    "region": "JP",
-   "delay_ms": 197
+   "delay_ms": 179,
+   "verify": {
+    "gstatic": 154,
+    "google": 179,
+    "yt": 170
+   }
   },
   {
-   "name": "US-017 US_282 625KB/s R002-260618 [2688a0364bb4]",
-   "type": "http",
-   "server": "44.229.69.166",
-   "port": 8443,
-   "region": "US",
-   "delay_ms": 199
-  },
-  {
-   "name": "RU-001 RU(AzadNet.t.me) (22)",
+   "name": "XX-002 未知丨yoyapai.com_15",
    "type": "vless",
-   "server": "185.148.107.30",
+   "server": "185.148.107.40",
    "port": 8880,
-   "region": "RU",
-   "delay_ms": 200
+   "region": "XX",
+   "delay_ms": 180,
+   "verify": {
+    "gstatic": 190,
+    "google": 180,
+    "yt": 192
+   }
   },
   {
-   "name": "UK-001 英国 001",
+   "name": "XX-003 爱沙尼亚_102704014",
    "type": "vless",
-   "server": "185.162.229.40",
+   "server": "45.80.110.30",
    "port": 8880,
-   "region": "UK",
-   "delay_ms": 202
-  },
-  {
-   "name": "FR-003 FR法国丨yoyapai.com_5",
-   "type": "vless",
-   "server": "80.93.202.40",
-   "port": 8880,
-   "region": "FR",
-   "delay_ms": 202
-  },
-  {
-   "name": "SG-006 SG_94 884KB/s P002-260618 [7385d869a22b]",
-   "type": "http",
-   "server": "128.199.113.85",
-   "port": 9090,
-   "region": "SG",
-   "delay_ms": 202
+   "region": "XX",
+   "delay_ms": 181,
+   "verify": {
+    "gstatic": 192,
+    "google": 181,
+    "yt": 188
+   }
   },
   {
    "name": "MY-001 马来西亚_102704006",
@@ -435,15 +243,285 @@
    "server": "8.35.211.43",
    "port": 2053,
    "region": "MY",
-   "delay_ms": 202
+   "delay_ms": 182,
+   "verify": {
+    "gstatic": 189,
+    "google": 182,
+    "yt": 189
+   }
   },
   {
-   "name": "XX-012 未知丨yoyapai.com_15",
+   "name": "US-007 US_286 485KB/s R002-260618 [3a4399d91e76]",
+   "type": "http",
+   "server": "35.84.133.236",
+   "port": 8443,
+   "region": "US",
+   "delay_ms": 182,
+   "verify": {
+    "gstatic": 193,
+    "google": 182,
+    "yt": 196
+   }
+  },
+  {
+   "name": "US-008 US_288 176KB/s R002-260618 [b4135a5f200b]",
+   "type": "http",
+   "server": "137.175.22.98",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 183,
+   "verify": {
+    "gstatic": 188,
+    "google": 183,
+    "yt": 180
+   }
+  },
+  {
+   "name": "CA-001 CA加拿大丨yoyapai.com_1",
    "type": "vless",
-   "server": "185.148.107.40",
+   "server": "155.46.167.30",
+   "port": 8880,
+   "region": "CA",
+   "delay_ms": 183,
+   "verify": {
+    "gstatic": 186,
+    "google": 183,
+    "yt": 184
+   }
+  },
+  {
+   "name": "US-009 美国_1027043059",
+   "type": "vless",
+   "server": "198.177.56.30",
+   "port": 8880,
+   "region": "US",
+   "delay_ms": 184,
+   "verify": {
+    "gstatic": 179,
+    "google": 184,
+    "yt": 188
+   }
+  },
+  {
+   "name": "XX-004 立陶宛_102704013",
+   "type": "vless",
+   "server": "89.116.180.30",
    "port": 8880,
    "region": "XX",
-   "delay_ms": 203
+   "delay_ms": 185,
+   "verify": {
+    "gstatic": 202,
+    "google": 185,
+    "yt": 198
+   }
+  },
+  {
+   "name": "XX-005 亚美尼亚_102704005",
+   "type": "vless",
+   "server": "185.162.229.50",
+   "port": 8880,
+   "region": "XX",
+   "delay_ms": 185,
+   "verify": {
+    "gstatic": 198,
+    "google": 185,
+    "yt": 201
+   }
+  },
+  {
+   "name": "RU-001 RU(AzadNet.t.me) (22)",
+   "type": "vless",
+   "server": "185.148.107.30",
+   "port": 8880,
+   "region": "RU",
+   "delay_ms": 185,
+   "verify": {
+    "gstatic": 181,
+    "google": 185,
+    "yt": 200
+   }
+  },
+  {
+   "name": "FR-003 FR_47 7.5MB/s R002-260618 [39873ef4d996]",
+   "type": "http",
+   "server": "172.64.68.89",
+   "port": 443,
+   "region": "FR",
+   "delay_ms": 186,
+   "verify": {
+    "gstatic": 182,
+    "google": 186,
+    "yt": 189
+   }
+  },
+  {
+   "name": "US-010 US丨yoyapai.com美国_2",
+   "type": "vless",
+   "server": "188.164.248.110",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 188,
+   "verify": {
+    "gstatic": 188,
+    "google": 188,
+    "yt": 205
+   }
+  },
+  {
+   "name": "XX-006 亚美尼亚_102704006",
+   "type": "vless",
+   "server": "185.162.229.30",
+   "port": 8880,
+   "region": "XX",
+   "delay_ms": 189,
+   "verify": {
+    "gstatic": 186,
+    "google": 189,
+    "yt": 207
+   }
+  },
+  {
+   "name": "XX-007 未知丨yoyapai.com_58",
+   "type": "vless",
+   "server": "185.148.104.30",
+   "port": 8880,
+   "region": "XX",
+   "delay_ms": 190,
+   "verify": {
+    "gstatic": 186,
+    "google": 190,
+    "yt": 197
+   }
+  },
+  {
+   "name": "US-011 美国_102704619",
+   "type": "vless",
+   "server": "108.165.152.30",
+   "port": 8880,
+   "region": "US",
+   "delay_ms": 190,
+   "verify": {
+    "gstatic": 189,
+    "google": 190,
+    "yt": 186
+   }
+  },
+  {
+   "name": "XX-008 罗马尼亚_102704021",
+   "type": "vless",
+   "server": "45.85.118.50",
+   "port": 8880,
+   "region": "XX",
+   "delay_ms": 191,
+   "verify": {
+    "gstatic": 199,
+    "google": 191,
+    "yt": 193
+   }
+  },
+  {
+   "name": "XX-009 立陶宛_102704011",
+   "type": "vless",
+   "server": "89.116.180.40",
+   "port": 8880,
+   "region": "XX",
+   "delay_ms": 191,
+   "verify": {
+    "gstatic": 190,
+    "google": 191,
+    "yt": 182
+   }
+  },
+  {
+   "name": "US-012 US_473 105KB/s R002-260618 [713d9982d1a3]",
+   "type": "http",
+   "server": "137.175.22.88",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 193,
+   "verify": {
+    "gstatic": 187,
+    "google": 193,
+    "yt": 194
+   }
+  },
+  {
+   "name": "US-013 US_226 559KB/s R002-260618 [49dd046d95fd]",
+   "type": "http",
+   "server": "44.248.167.117",
+   "port": 8443,
+   "region": "US",
+   "delay_ms": 193,
+   "verify": {
+    "gstatic": 196,
+    "google": 193,
+    "yt": 193
+   }
+  },
+  {
+   "name": "US-014 US_282 625KB/s R002-260618 [2688a0364bb4]",
+   "type": "http",
+   "server": "44.229.69.166",
+   "port": 8443,
+   "region": "US",
+   "delay_ms": 194,
+   "verify": {
+    "gstatic": 195,
+    "google": 194,
+    "yt": 189
+   }
+  },
+  {
+   "name": "UK-001 英国 001",
+   "type": "vless",
+   "server": "185.162.229.40",
+   "port": 8880,
+   "region": "UK",
+   "delay_ms": 195,
+   "verify": {
+    "gstatic": 197,
+    "google": 195,
+    "yt": 194
+   }
+  },
+  {
+   "name": "US-015 US_277 713KB/s R002-260618 [4a813a8d418a]",
+   "type": "http",
+   "server": "54.190.176.228",
+   "port": 8443,
+   "region": "US",
+   "delay_ms": 199,
+   "verify": {
+    "gstatic": 196,
+    "google": 199,
+    "yt": 198
+   }
+  },
+  {
+   "name": "US-016 US_225 350KB/s R002-260618 [ea1befc94c60]",
+   "type": "http",
+   "server": "137.175.22.84",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 199,
+   "verify": {
+    "gstatic": 201,
+    "google": 199,
+    "yt": 206
+   }
+  },
+  {
+   "name": "US-017 US_2 2.2MB/s",
+   "type": "http",
+   "server": "154.81.36.92",
+   "port": 8443,
+   "region": "US",
+   "delay_ms": 200,
+   "verify": {
+    "gstatic": 173,
+    "google": 200,
+    "yt": 171
+   }
   },
   {
    "name": "NL-001 NL_177 1.2MB/s R002-260618 [11147645fc19]",
@@ -451,23 +529,25 @@
    "server": "103.97.88.154",
    "port": 443,
    "region": "NL",
-   "delay_ms": 203
+   "delay_ms": 206,
+   "verify": {
+    "gstatic": 231,
+    "google": 206,
+    "yt": 228
+   }
   },
   {
-   "name": "US-018 US_225 350KB/s R002-260618 [ea1befc94c60]",
+   "name": "NL-002 NL_137 1.4MB/s R002-260618 [511bc38da784]",
    "type": "http",
-   "server": "137.175.22.84",
+   "server": "185.140.209.235",
    "port": 443,
-   "region": "US",
-   "delay_ms": 203
-  },
-  {
-   "name": "US-019 US_286 485KB/s R002-260618 [3a4399d91e76]",
-   "type": "http",
-   "server": "35.84.133.236",
-   "port": 8443,
-   "region": "US",
-   "delay_ms": 205
+   "region": "NL",
+   "delay_ms": 209,
+   "verify": {
+    "gstatic": 237,
+    "google": 209,
+    "yt": 227
+   }
   },
   {
    "name": "FR-004 FR_28 1.5MB/s R002-260618 [df3cefb034a8]",
@@ -475,15 +555,51 @@
    "server": "103.82.101.44",
    "port": 443,
    "region": "FR",
-   "delay_ms": 205
+   "delay_ms": 210,
+   "verify": {
+    "gstatic": 225,
+    "google": 210,
+    "yt": 206
+   }
   },
   {
-   "name": "SG-007 SG(AzadNet.t.me) (5)",
-   "type": "trojan",
-   "server": "139.162.36.248",
+   "name": "NL-003 NL_275 1.9MB/s P002-260618 [e4e8d92b2a08]",
+   "type": "http",
+   "server": "5.255.118.82",
    "port": 443,
-   "region": "SG",
-   "delay_ms": 205
+   "region": "NL",
+   "delay_ms": 210,
+   "verify": {
+    "gstatic": 214,
+    "google": 210,
+    "yt": 216
+   }
+  },
+  {
+   "name": "DE-001 FR_27 1.8MB/s R002-260618 [31a8661c0de3]",
+   "type": "http",
+   "server": "103.82.101.43",
+   "port": 443,
+   "region": "DE",
+   "delay_ms": 210,
+   "verify": {
+    "gstatic": 209,
+    "google": 210,
+    "yt": 215
+   }
+  },
+  {
+   "name": "NL-004 NL_32 975KB/s R002-260618 [212db84ab5aa]",
+   "type": "http",
+   "server": "103.97.88.154",
+   "port": 443,
+   "region": "NL",
+   "delay_ms": 213,
+   "verify": {
+    "gstatic": 203,
+    "google": 213,
+    "yt": 211
+   }
   },
   {
    "name": "IT-001 IT_17 1.3MB/s R002-260618 [27a7f7295885]",
@@ -491,7 +607,64 @@
    "server": "93.42.177.250",
    "port": 443,
    "region": "IT",
-   "delay_ms": 209
+   "delay_ms": 215,
+   "verify": {
+    "gstatic": 228,
+    "google": 215,
+    "yt": 231
+   }
+  },
+  {
+   "name": "US-018 美国_102704708",
+   "type": "vless",
+   "server": "165.245.181.78",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 216,
+   "verify": {
+    "gstatic": 259,
+    "google": 216,
+    "yt": 70
+   }
+  },
+  {
+   "name": "FR-005 FR_35 4.4MB/s R002-260618 [ba0d00d42376]",
+   "type": "http",
+   "server": "141.94.16.4",
+   "port": 443,
+   "region": "FR",
+   "delay_ms": 216,
+   "verify": {
+    "gstatic": 239,
+    "google": 216,
+    "yt": 214
+   }
+  },
+  {
+   "name": "NL-005 NL_274 2.0MB/s P002-260618 [64363aa77890]",
+   "type": "http",
+   "server": "5.255.118.82",
+   "port": 443,
+   "region": "NL",
+   "delay_ms": 217,
+   "verify": {
+    "gstatic": 239,
+    "google": 217,
+    "yt": 231
+   }
+  },
+  {
+   "name": "FR-006 FR_8 824KB/s R002-260618 [7b7481c3cec7]",
+   "type": "http",
+   "server": "87.98.174.157",
+   "port": 6103,
+   "region": "FR",
+   "delay_ms": 219,
+   "verify": {
+    "gstatic": 217,
+    "google": 219,
+    "yt": 212
+   }
   },
   {
    "name": "IT-002 IT_43 770KB/s R002-260618 [ad206ad6cf52]",
@@ -499,247 +672,258 @@
    "server": "93.42.177.250",
    "port": 443,
    "region": "IT",
-   "delay_ms": 211
+   "delay_ms": 220,
+   "verify": {
+    "gstatic": 218,
+    "google": 220,
+    "yt": 238
+   }
   },
   {
-   "name": "NL-002 NL_274 2.0MB/s P002-260618 [64363aa77890]",
-   "type": "http",
-   "server": "5.255.118.82",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 214
-  },
-  {
-   "name": "US-020 US_2 2.2MB/s",
-   "type": "http",
-   "server": "154.81.36.92",
-   "port": 8443,
-   "region": "US",
-   "delay_ms": 214
-  },
-  {
-   "name": "FR-005 FR_8 824KB/s R002-260618 [7b7481c3cec7]",
-   "type": "http",
-   "server": "87.98.174.157",
-   "port": 6103,
-   "region": "FR",
-   "delay_ms": 215
-  },
-  {
-   "name": "DE-001 DE_7 3.8MB/s R002-260618 [92abb46579b9]",
-   "type": "http",
-   "server": "159.69.94.125",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 217
-  },
-  {
-   "name": "NL-003 NL_32 975KB/s R002-260618 [212db84ab5aa]",
-   "type": "http",
-   "server": "103.97.88.154",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 218
-  },
-  {
-   "name": "NL-004 NL_275 1.9MB/s P002-260618 [e4e8d92b2a08]",
-   "type": "http",
-   "server": "5.255.118.82",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 221
-  },
-  {
-   "name": "IN-002 印度_102704027",
-   "type": "vless",
-   "server": "161.118.220.38",
-   "port": 443,
-   "region": "IN",
-   "delay_ms": 226
-  },
-  {
-   "name": "XX-013 奥地利_102704021",
-   "type": "vless",
-   "server": "212.183.88.30",
-   "port": 8880,
-   "region": "XX",
-   "delay_ms": 227
-  },
-  {
-   "name": "NL-005 NL_137 1.4MB/s R002-260618 [511bc38da784]",
-   "type": "http",
-   "server": "185.140.209.235",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 228
-  },
-  {
-   "name": "NL-006 NL_105 987KB/s R002-260618 [fa57876993ca]",
-   "type": "http",
-   "server": "185.53.129.141",
-   "port": 9090,
-   "region": "NL",
-   "delay_ms": 228
-  },
-  {
-   "name": "XX-014 CF中转_1027046954",
-   "type": "vless",
-   "server": "172.67.208.235",
-   "port": 2096,
-   "region": "XX",
-   "delay_ms": 228
-  },
-  {
-   "name": "DE-002 德国_102704310",
-   "type": "vless",
-   "server": "88.198.82.146",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 228
-  },
-  {
-   "name": "DE-003 FR_27 1.8MB/s R002-260618 [31a8661c0de3]",
-   "type": "http",
-   "server": "103.82.101.43",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 230
-  },
-  {
-   "name": "US-021 US美国丨yoyapai.com_11",
-   "type": "vless",
-   "server": "63.141.128.30",
-   "port": 8880,
-   "region": "US",
-   "delay_ms": 231
-  },
-  {
-   "name": "NL-007 NL_123 973KB/s R002-260618 [28e6f82e9549]",
-   "type": "http",
-   "server": "185.246.153.28",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 232
-  },
-  {
-   "name": "XX-015 IE_2 1.3MB/s R002-260618 [ad7d5a110359]",
-   "type": "http",
-   "server": "18.200.158.139",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 232
-  },
-  {
-   "name": "DE-004 DE_187 4.5MB/s P002-260618 [c242c75d0a6f]",
-   "type": "http",
-   "server": "213.109.163.119",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 232
-  },
-  {
-   "name": "XX-016 IE_11 3.3MB/s K001-260618 [ebe2b193bdbc]",
-   "type": "http",
-   "server": "18.200.158.139",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 235
-  },
-  {
-   "name": "XX-017 IE_1 3.5MB/s R002-260618 [28e6899e674e]",
-   "type": "http",
-   "server": "34.249.214.108",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 236
-  },
-  {
-   "name": "US-022 US_64 834KB/s R002-260618 [641634a96995]",
-   "type": "http",
-   "server": "64.98.50.100",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 237
-  },
-  {
-   "name": "IT-003 IT_12 870KB/s R002-260618 [680af2744477]",
-   "type": "http",
-   "server": "93.71.245.84",
-   "port": 8090,
-   "region": "IT",
-   "delay_ms": 237
-  },
-  {
-   "name": "XX-018 @V2ray_Collector",
-   "type": "hysteria2",
-   "server": "87.76.211.161",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 237
-  },
-  {
-   "name": "AR-001 ar14n24b VL-TCP- XX 139ms",
-   "type": "vless",
-   "server": "193.233.221.86",
-   "port": 443,
-   "region": "AR",
-   "delay_ms": 238
-  },
-  {
-   "name": "US-023 US(AzadNet.t.me) (100)",
+   "name": "US-019 US(AzadNet.t.me) (100)",
    "type": "vless",
    "server": "141.193.213.30",
    "port": 8880,
    "region": "US",
-   "delay_ms": 238
+   "delay_ms": 221,
+   "verify": {
+    "gstatic": 223,
+    "google": 221,
+    "yt": 218
+   }
   },
   {
-   "name": "US-024 US_481 888KB/s K001-260618 [264821797083]",
-   "type": "http",
-   "server": "64.98.50.100",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 239
-  },
-  {
-   "name": "US-025 US_220 824KB/s P002-260618 [b058797c1892]",
-   "type": "http",
-   "server": "173.42.49.102",
-   "port": 8090,
-   "region": "US",
-   "delay_ms": 240
-  },
-  {
-   "name": "US-026 US_482 779KB/s K001-260618 [29ca444f37cb]",
-   "type": "http",
-   "server": "12.202.180.10",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 244
-  },
-  {
-   "name": "US-027 US美国(mibei77.com 米贝节点分享)_45",
+   "name": "US-020 US美国丨yoyapai.com_11",
    "type": "vless",
-   "server": "23.227.39.30",
+   "server": "63.141.128.30",
    "port": 8880,
    "region": "US",
-   "delay_ms": 248
+   "delay_ms": 225,
+   "verify": {
+    "gstatic": 256,
+    "google": 225,
+    "yt": 223
+   }
   },
   {
-   "name": "US-028 US_221 627KB/s R002-260618 [61dbed4beba1]",
+   "name": "XX-010 奥地利_102704021",
+   "type": "vless",
+   "server": "212.183.88.30",
+   "port": 8880,
+   "region": "XX",
+   "delay_ms": 227,
+   "verify": {
+    "gstatic": 225,
+    "google": 227,
+    "yt": 233
+   }
+  },
+  {
+   "name": "XX-011 IE_2 1.3MB/s R002-260618 [ad7d5a110359]",
+   "type": "http",
+   "server": "18.200.158.139",
+   "port": 443,
+   "region": "XX",
+   "delay_ms": 228,
+   "verify": {
+    "gstatic": 237,
+    "google": 228,
+    "yt": 233
+   }
+  },
+  {
+   "name": "US-021 US_221 627KB/s R002-260618 [61dbed4beba1]",
    "type": "http",
    "server": "162.244.227.36",
    "port": 443,
    "region": "US",
-   "delay_ms": 248
+   "delay_ms": 230,
+   "verify": {
+    "gstatic": 271,
+    "google": 230,
+    "yt": 256
+   }
   },
   {
-   "name": "DE-005 DE_23 3.5MB/s R002-260618 [ba686855c77a]",
+   "name": "US-022 US_481 888KB/s K001-260618 [264821797083]",
+   "type": "http",
+   "server": "64.98.50.100",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 231,
+   "verify": {
+    "gstatic": 242,
+    "google": 231,
+    "yt": 225
+   }
+  },
+  {
+   "name": "XX-012 IE_1 3.5MB/s R002-260618 [28e6899e674e]",
+   "type": "http",
+   "server": "34.249.214.108",
+   "port": 443,
+   "region": "XX",
+   "delay_ms": 232,
+   "verify": {
+    "gstatic": 235,
+    "google": 232,
+    "yt": 234
+   }
+  },
+  {
+   "name": "XX-013 @V2ray_Collector",
+   "type": "hysteria2",
+   "server": "87.76.211.161",
+   "port": 443,
+   "region": "XX",
+   "delay_ms": 232,
+   "verify": {
+    "gstatic": 231,
+    "google": 232,
+    "yt": 237
+   }
+  },
+  {
+   "name": "DE-002 DE_187 4.5MB/s P002-260618 [c242c75d0a6f]",
+   "type": "http",
+   "server": "213.109.163.119",
+   "port": 443,
+   "region": "DE",
+   "delay_ms": 235,
+   "verify": {
+    "gstatic": 237,
+    "google": 235,
+    "yt": 250
+   }
+  },
+  {
+   "name": "XX-014 IE_11 3.3MB/s K001-260618 [ebe2b193bdbc]",
+   "type": "http",
+   "server": "18.200.158.139",
+   "port": 443,
+   "region": "XX",
+   "delay_ms": 235,
+   "verify": {
+    "gstatic": 232,
+    "google": 235,
+    "yt": 240
+   }
+  },
+  {
+   "name": "US-023 US_64 834KB/s R002-260618 [641634a96995]",
+   "type": "http",
+   "server": "64.98.50.100",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 235,
+   "verify": {
+    "gstatic": 246,
+    "google": 235,
+    "yt": 236
+   }
+  },
+  {
+   "name": "NL-006 NL_123 973KB/s R002-260618 [28e6f82e9549]",
+   "type": "http",
+   "server": "185.246.153.28",
+   "port": 443,
+   "region": "NL",
+   "delay_ms": 237,
+   "verify": {
+    "gstatic": 238,
+    "google": 237,
+    "yt": 233
+   }
+  },
+  {
+   "name": "RU-002 RU_2 1.5MB/s R002-260618 [5a513b5711bd]",
+   "type": "http",
+   "server": "87.242.85.187",
+   "port": 8443,
+   "region": "RU",
+   "delay_ms": 241,
+   "verify": {
+    "gstatic": 262,
+    "google": 241
+   }
+  },
+  {
+   "name": "NL-007 NL_120 6.5MB/s P002-260618 [6aa08aa36e29]",
+   "type": "http",
+   "server": "51.159.225.196",
+   "port": 23856,
+   "region": "NL",
+   "delay_ms": 242,
+   "verify": {
+    "gstatic": 299,
+    "google": 242,
+    "yt": 248
+   }
+  },
+  {
+   "name": "US-024 US美国(mibei77.com 米贝节点分享)_45",
+   "type": "vless",
+   "server": "23.227.39.30",
+   "port": 8880,
+   "region": "US",
+   "delay_ms": 245,
+   "verify": {
+    "gstatic": 261,
+    "google": 245,
+    "yt": 252
+   }
+  },
+  {
+   "name": "AR-001 ar14n24b VL-TCP- XX 271ms",
+   "type": "vless",
+   "server": "78.135.73.168",
+   "port": 443,
+   "region": "AR",
+   "delay_ms": 245,
+   "verify": {
+    "gstatic": 276,
+    "google": 245,
+    "yt": 252
+   }
+  },
+  {
+   "name": "FR-007 FR_11 1.1MB/s R002-260618 [e85281f2352e]",
+   "type": "http",
+   "server": "82.96.128.175",
+   "port": 8090,
+   "region": "FR",
+   "delay_ms": 245,
+   "verify": {
+    "gstatic": 253,
+    "google": 245,
+    "yt": 248
+   }
+  },
+  {
+   "name": "DE-003 DE_7 3.8MB/s R002-260618 [92abb46579b9]",
+   "type": "http",
+   "server": "159.69.94.125",
+   "port": 443,
+   "region": "DE",
+   "delay_ms": 246,
+   "verify": {
+    "gstatic": 220,
+    "google": 246,
+    "yt": 227
+   }
+  },
+  {
+   "name": "DE-004 DE_23 3.5MB/s R002-260618 [ba686855c77a]",
    "type": "http",
    "server": "87.106.223.158",
    "port": 443,
    "region": "DE",
-   "delay_ms": 248
+   "delay_ms": 249,
+   "verify": {
+    "gstatic": 249,
+    "google": 249,
+    "yt": 234
+   }
   },
   {
    "name": "AR-002 @tootffarangi",
@@ -747,15 +931,25 @@
    "server": "141.98.41.87",
    "port": 443,
    "region": "AR",
-   "delay_ms": 248
+   "delay_ms": 249,
+   "verify": {
+    "gstatic": 265,
+    "google": 249,
+    "yt": 260
+   }
   },
   {
-   "name": "FR-006 FR_10 1.5MB/s R002-260618 [e9b65e97ef66]",
+   "name": "DE-005 DE_30 5.7MB/s R002-260618 [379f30666176]",
    "type": "http",
-   "server": "80.124.109.22",
-   "port": 8090,
-   "region": "FR",
-   "delay_ms": 251
+   "server": "158.173.154.2",
+   "port": 9002,
+   "region": "DE",
+   "delay_ms": 251,
+   "verify": {
+    "gstatic": 279,
+    "google": 251,
+    "yt": 258
+   }
   },
   {
    "name": "DE-006 DE_6 567KB/s R002-260618 [797bb01a95ab]",
@@ -763,151 +957,232 @@
    "server": "176.94.74.21",
    "port": 443,
    "region": "DE",
-   "delay_ms": 252
+   "delay_ms": 252,
+   "verify": {
+    "gstatic": 251,
+    "google": 252,
+    "yt": 231
+   }
   },
   {
-   "name": "NL-008 NL_119 6.1MB/s R002-260618 [bcf20a2004d6]",
-   "type": "http",
-   "server": "51.159.225.196",
-   "port": 23856,
-   "region": "NL",
-   "delay_ms": 252
-  },
-  {
-   "name": "NL-009 NL_109 6.7MB/s [d24c6ab90080]",
+   "name": "NL-008 NL_109 6.7MB/s [d24c6ab90080]",
    "type": "http",
    "server": "84.17.47.147",
    "port": 9002,
    "region": "NL",
-   "delay_ms": 255
+   "delay_ms": 253,
+   "verify": {
+    "gstatic": 286,
+    "google": 253,
+    "yt": 262
+   }
   },
   {
-   "name": "XX-019 EPODONIOS",
-   "type": "vless",
-   "server": "163.245.42.48",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 256
-  },
-  {
-   "name": "US-029 US_227 1021KB/s R002-260618 [e971c1f60e14]",
+   "name": "FR-008 FR_10 1.5MB/s R002-260618 [e9b65e97ef66]",
    "type": "http",
-   "server": "38.247.141.135",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 257
+   "server": "80.124.109.22",
+   "port": 8090,
+   "region": "FR",
+   "delay_ms": 254,
+   "verify": {
+    "gstatic": 204,
+    "google": 254,
+    "yt": 251
+   }
   },
   {
-   "name": "US-030 US_121 161KB/s R002-260618 [535e13772931]",
-   "type": "http",
-   "server": "38.28.193.188",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 258
-  },
-  {
-   "name": "NL-010 NL_303 2.6MB/s P002-260618 [111aaa619f5f]",
-   "type": "http",
-   "server": "84.17.47.123",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 259
-  },
-  {
-   "name": "AR-003 ar14n24b VL-TCP- XX 271ms",
-   "type": "vless",
-   "server": "78.135.73.168",
-   "port": 443,
-   "region": "AR",
-   "delay_ms": 263
-  },
-  {
-   "name": "US-031 US丨yoyapai.com美国_1",
-   "type": "vless",
-   "server": "128.203.252.97",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 264
-  },
-  {
-   "name": "XX-020 RO_70 1.2MB/s R002-260618 [0a23683cba9b]",
-   "type": "http",
-   "server": "193.176.84.22",
-   "port": 9002,
-   "region": "XX",
-   "delay_ms": 266
-  },
-  {
-   "name": "NL-011 NL_68 5.6MB/s P002-260618 [5d22a4a266cd]",
-   "type": "http",
-   "server": "84.17.47.146",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 266
-  },
-  {
-   "name": "IT-004 IT_24 769KB/s R002-260618 [aaf6029dcb7b]",
-   "type": "socks5",
-   "server": "212.77.75.25",
-   "port": 1088,
-   "region": "IT",
-   "delay_ms": 266
-  },
-  {
-   "name": "XX-021 LT_3 1.7MB/s R002-260618 [bfa4d7ad5717]",
+   "name": "XX-015 LT_3 1.7MB/s R002-260618 [bfa4d7ad5717]",
    "type": "http",
    "server": "89.124.11.9",
    "port": 443,
    "region": "XX",
-   "delay_ms": 266
+   "delay_ms": 254,
+   "verify": {
+    "gstatic": 266,
+    "google": 254,
+    "yt": 265
+   }
   },
   {
-   "name": "RU-002 RU_1 1.1MB/s R002-260618 [5aeebd4fdf60]",
+   "name": "NL-009 NL_172 3.8MB/s R002-260618 [565ec6032e34]",
    "type": "http",
-   "server": "178.219.43.226",
-   "port": 443,
-   "region": "RU",
-   "delay_ms": 270
-  },
-  {
-   "name": "UK-002 GB_15 1.3MB/s R002-260618 [22710ec82aa7]",
-   "type": "http",
-   "server": "212.102.63.1",
-   "port": 443,
-   "region": "UK",
-   "delay_ms": 274
-  },
-  {
-   "name": "CH-001 CH_29 564KB/s R002-260618 [2543240d9dd6]",
-   "type": "http",
-   "server": "31.7.62.50",
-   "port": 443,
-   "region": "CH",
-   "delay_ms": 274
-  },
-  {
-   "name": "NL-012 NL_75 5.4MB/s R002-260618 [cf19808e163e]",
-   "type": "http",
-   "server": "84.17.47.148",
+   "server": "84.17.47.126",
    "port": 9002,
    "region": "NL",
-   "delay_ms": 274
+   "delay_ms": 254,
+   "verify": {
+    "gstatic": 286,
+    "google": 254,
+    "yt": 252
+   }
   },
   {
-   "name": "US-032 US_129 184KB/s R002-260618 [a4d3572ae220]",
+   "name": "US-025 US_129 184KB/s R002-260618 [a4d3572ae220]",
    "type": "http",
    "server": "38.28.193.188",
    "port": 443,
    "region": "US",
-   "delay_ms": 275
+   "delay_ms": 256,
+   "verify": {
+    "gstatic": 269,
+    "google": 256,
+    "yt": 275
+   }
   },
   {
-   "name": "US-033 US_217 745KB/s R002-260618 [c0c88000d4a2]",
+   "name": "NL-010 NL_85 5.8MB/s [faaf59d2e35f]",
    "type": "http",
-   "server": "162.217.114.50",
+   "server": "84.17.47.148",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 257,
+   "verify": {
+    "gstatic": 292,
+    "google": 257,
+    "yt": 255
+   }
+  },
+  {
+   "name": "FR-009 FR_262 895KB/s K001-260618 [af44a4a293e5]",
+   "type": "http",
+   "server": "31.32.19.111",
+   "port": 8081,
+   "region": "FR",
+   "delay_ms": 257,
+   "verify": {
+    "gstatic": 305,
+    "google": 257,
+    "yt": 301
+   }
+  },
+  {
+   "name": "NL-011 NL_105 987KB/s R002-260618 [fa57876993ca]",
+   "type": "http",
+   "server": "185.53.129.141",
+   "port": 9090,
+   "region": "NL",
+   "delay_ms": 259,
+   "verify": {
+    "gstatic": 231,
+    "google": 259,
+    "yt": 286
+   }
+  },
+  {
+   "name": "US-026 US_121 161KB/s R002-260618 [535e13772931]",
+   "type": "http",
+   "server": "38.28.193.188",
    "port": 443,
    "region": "US",
-   "delay_ms": 275
+   "delay_ms": 259,
+   "verify": {
+    "gstatic": 261,
+    "google": 259,
+    "yt": 270
+   }
+  },
+  {
+   "name": "US-027 US_51 329KB/s R002-260618 [4832540fa4bc]",
+   "type": "http",
+   "server": "38.28.193.1",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 260,
+   "verify": {
+    "gstatic": 265,
+    "google": 260,
+    "yt": 271
+   }
+  },
+  {
+   "name": "US-028 US丨yoyapai.com美国_1",
+   "type": "vless",
+   "server": "128.203.252.97",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 262,
+   "verify": {
+    "gstatic": 274,
+    "google": 262,
+    "yt": 264
+   }
+  },
+  {
+   "name": "XX-016 乌克兰 001",
+   "type": "vless",
+   "server": "213.111.148.137",
+   "port": 443,
+   "region": "XX",
+   "delay_ms": 264,
+   "verify": {
+    "gstatic": 312,
+    "google": 264
+   }
+  },
+  {
+   "name": "AR-003 ar14n24b VL-TCP- XX 139ms",
+   "type": "vless",
+   "server": "193.233.221.86",
+   "port": 443,
+   "region": "AR",
+   "delay_ms": 267,
+   "verify": {
+    "gstatic": 250,
+    "google": 267,
+    "yt": 250
+   }
+  },
+  {
+   "name": "NL-012 NL_72 3.6MB/s K001-260618 [378b1d5ed2ba]",
+   "type": "http",
+   "server": "84.17.47.147",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 272,
+   "verify": {
+    "gstatic": 263,
+    "google": 272,
+    "yt": 253
+   }
+  },
+  {
+   "name": "FR-010 FR_12 1.2MB/s R002-260618 [4b53647fa1cf]",
+   "type": "http",
+   "server": "83.206.1.225",
+   "port": 8090,
+   "region": "FR",
+   "delay_ms": 272,
+   "verify": {
+    "gstatic": 278,
+    "google": 272,
+    "yt": 280
+   }
+  },
+  {
+   "name": "NL-013 NL_184 5.8MB/s P002-260618 [cb3b6268d982]",
+   "type": "http",
+   "server": "84.17.47.148",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 273,
+   "verify": {
+    "gstatic": 283,
+    "google": 273,
+    "yt": 282
+   }
+  },
+  {
+   "name": "NL-014 NL_75 5.4MB/s R002-260618 [cf19808e163e]",
+   "type": "http",
+   "server": "84.17.47.148",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 275,
+   "verify": {
+    "gstatic": 294,
+    "google": 275,
+    "yt": 261
+   }
   },
   {
    "name": "DE-007 NL_69 2.8MB/s P002-260618 [441de0340377]",
@@ -915,175 +1190,25 @@
    "server": "84.17.47.125",
    "port": 9002,
    "region": "DE",
-   "delay_ms": 276
+   "delay_ms": 277,
+   "verify": {
+    "gstatic": 278,
+    "google": 277,
+    "yt": 273
+   }
   },
   {
-   "name": "US-034 US_51 329KB/s R002-260618 [4832540fa4bc]",
-   "type": "http",
-   "server": "38.28.193.1",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 276
-  },
-  {
-   "name": "NL-013 NL_72 3.6MB/s K001-260618 [378b1d5ed2ba]",
-   "type": "http",
-   "server": "84.17.47.147",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 277
-  },
-  {
-   "name": "DE-008 DE_30 5.7MB/s R002-260618 [379f30666176]",
-   "type": "http",
-   "server": "158.173.154.2",
-   "port": 9002,
-   "region": "DE",
-   "delay_ms": 278
-  },
-  {
-   "name": "NL-014 NL_171 5.8MB/s R002-260618 [aee8d229a5b3]",
-   "type": "http",
-   "server": "84.17.47.124",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 278
-  },
-  {
-   "name": "RU-003 RU_2 1.5MB/s R002-260618 [5a513b5711bd]",
-   "type": "http",
-   "server": "87.242.85.187",
-   "port": 8443,
-   "region": "RU",
-   "delay_ms": 279
-  },
-  {
-   "name": "DE-009 DE_21 4.3MB/s R002-260618 [711ff06169bb]",
-   "type": "http",
-   "server": "158.173.154.1",
-   "port": 9002,
-   "region": "DE",
-   "delay_ms": 279
-  },
-  {
-   "name": "XX-022 LV_23 2.1MB/s K001-260618 [e8d4b41ce864]",
-   "type": "http",
-   "server": "185.219.159.16",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 280
-  },
-  {
-   "name": "FR-007 FR_12 1.2MB/s R002-260618 [4b53647fa1cf]",
-   "type": "http",
-   "server": "83.206.1.225",
-   "port": 8090,
-   "region": "FR",
-   "delay_ms": 281
-  },
-  {
-   "name": "NL-015 NL_184 5.8MB/s P002-260618 [cb3b6268d982]",
-   "type": "http",
-   "server": "84.17.47.148",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 282
-  },
-  {
-   "name": "NL-016 NL_85 5.8MB/s [faaf59d2e35f]",
-   "type": "http",
-   "server": "84.17.47.148",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 282
-  },
-  {
-   "name": "FR-008 FR_44 3.6MB/s R002-260618 [11232a723ad5]",
-   "type": "http",
-   "server": "82.65.162.76",
-   "port": 443,
-   "region": "FR",
-   "delay_ms": 286
-  },
-  {
-   "name": "IT-005 IT_7 2.0MB/s R002-260618 [306cbcf5a202]",
-   "type": "http",
-   "server": "94.177.163.156",
-   "port": 443,
-   "region": "IT",
-   "delay_ms": 286
-  },
-  {
-   "name": "DE-010 CZ_1 2.5MB/s R002-260618 [dea96bfbdd9e]",
-   "type": "http",
-   "server": "193.35.104.196",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 287
-  },
-  {
-   "name": "NL-017 NL_172 3.8MB/s R002-260618 [565ec6032e34]",
-   "type": "http",
-   "server": "84.17.47.126",
-   "port": 9002,
-   "region": "NL",
-   "delay_ms": 288
-  },
-  {
-   "name": "DE-011 NL_speednode_0025",
-   "type": "http",
-   "server": "84.17.47.149",
-   "port": 9002,
-   "region": "DE",
-   "delay_ms": 288
-  },
-  {
-   "name": "TW-002 TW(AzadNet.t.me) (2)",
-   "type": "trojan",
-   "server": "60.250.152.230",
-   "port": 8443,
-   "region": "TW",
-   "delay_ms": 289
-  },
-  {
-   "name": "SE-001 瑞典_102704068",
-   "type": "vless",
-   "server": "193.181.212.80",
-   "port": 443,
-   "region": "SE",
-   "delay_ms": 289
-  },
-  {
-   "name": "DE-012 LV_5 2.3MB/s R002-260618 [2933de132b5e]",
-   "type": "http",
-   "server": "185.219.159.15",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 290
-  },
-  {
-   "name": "RU-004 RU_4 1.4MB/s R002-260618 [48eeca537cae]",
-   "type": "http",
-   "server": "46.29.166.134",
-   "port": 1446,
-   "region": "RU",
-   "delay_ms": 290
-  },
-  {
-   "name": "NL-018 NL_120 6.5MB/s P002-260618 [6aa08aa36e29]",
-   "type": "http",
-   "server": "51.159.225.196",
-   "port": 23856,
-   "region": "NL",
-   "delay_ms": 290
-  },
-  {
-   "name": "NL-019 NL_42 1.3MB/s R002-260618 [4c2ae899be2c]",
+   "name": "NL-015 NL_42 1.3MB/s R002-260618 [4c2ae899be2c]",
    "type": "http",
    "server": "185.238.170.10",
    "port": 443,
    "region": "NL",
-   "delay_ms": 292
+   "delay_ms": 277,
+   "verify": {
+    "gstatic": 267,
+    "google": 277,
+    "yt": 287
+   }
   },
   {
    "name": "CA-002 CA_26 1.1MB/s R002-260618 [52d842dc27e9]",
@@ -1091,127 +1216,154 @@
    "server": "4.172.245.121",
    "port": 443,
    "region": "CA",
-   "delay_ms": 292
+   "delay_ms": 278,
+   "verify": {
+    "gstatic": 263,
+    "google": 278,
+    "yt": 268
+   }
   },
   {
-   "name": "XX-023 EPODONIOS",
-   "type": "vless",
-   "server": "177.7.51.29",
-   "port": 8443,
-   "region": "XX",
-   "delay_ms": 293
+   "name": "US-029 US_227 1021KB/s R002-260618 [e971c1f60e14]",
+   "type": "http",
+   "server": "38.247.141.135",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 279,
+   "verify": {
+    "gstatic": 271,
+    "google": 279,
+    "yt": 264
+   }
   },
   {
-   "name": "NL-020 NL_41 5.5MB/s R002-260618 [4251bc4d7d7f]",
+   "name": "NL-016 NL_68 5.6MB/s P002-260618 [5d22a4a266cd]",
+   "type": "http",
+   "server": "84.17.47.146",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 279,
+   "verify": {
+    "gstatic": 294,
+    "google": 279,
+    "yt": 285
+   }
+  },
+  {
+   "name": "DE-008 DE_21 4.3MB/s R002-260618 [711ff06169bb]",
+   "type": "http",
+   "server": "158.173.154.1",
+   "port": 9002,
+   "region": "DE",
+   "delay_ms": 279,
+   "verify": {
+    "gstatic": 265,
+    "google": 279,
+    "yt": 258
+   }
+  },
+  {
+   "name": "FR-011 FR_44 3.6MB/s R002-260618 [11232a723ad5]",
+   "type": "http",
+   "server": "82.65.162.76",
+   "port": 443,
+   "region": "FR",
+   "delay_ms": 279,
+   "verify": {
+    "gstatic": 281,
+    "google": 279,
+    "yt": 244
+   }
+  },
+  {
+   "name": "NL-017 NL_303 2.6MB/s P002-260618 [111aaa619f5f]",
    "type": "http",
    "server": "84.17.47.123",
    "port": 9002,
    "region": "NL",
-   "delay_ms": 294
+   "delay_ms": 280,
+   "verify": {
+    "gstatic": 295,
+    "google": 280,
+    "yt": 262
+   }
   },
   {
-   "name": "XX-024 EPODONIOS",
+   "name": "US-030 US_217 745KB/s R002-260618 [c0c88000d4a2]",
+   "type": "http",
+   "server": "162.217.114.50",
+   "port": 443,
+   "region": "US",
+   "delay_ms": 280,
+   "verify": {
+    "gstatic": 264,
+    "google": 280,
+    "yt": 289
+   }
+  },
+  {
+   "name": "XX-017 LV_23 2.1MB/s K001-260618 [e8d4b41ce864]",
+   "type": "http",
+   "server": "185.219.159.16",
+   "port": 443,
+   "region": "XX",
+   "delay_ms": 280,
+   "verify": {
+    "gstatic": 304,
+    "google": 280,
+    "yt": 268
+   }
+  },
+  {
+   "name": "RU-003 RU_1 1.1MB/s R002-260618 [5aeebd4fdf60]",
+   "type": "http",
+   "server": "178.219.43.226",
+   "port": 443,
+   "region": "RU",
+   "delay_ms": 281,
+   "verify": {
+    "gstatic": 301,
+    "google": 281
+   }
+  },
+  {
+   "name": "SE-001 瑞典_102704068",
+   "type": "vless",
+   "server": "193.181.212.80",
+   "port": 443,
+   "region": "SE",
+   "delay_ms": 281,
+   "verify": {
+    "gstatic": 308,
+    "google": 281,
+    "yt": 303
+   }
+  },
+  {
+   "name": "DE-009 NL_speednode_0025",
+   "type": "http",
+   "server": "84.17.47.149",
+   "port": 9002,
+   "region": "DE",
+   "delay_ms": 282,
+   "verify": {
+    "gstatic": 283,
+    "google": 282,
+    "yt": 302
+   }
+  },
+  {
+   "name": "XX-018 EPODONIOS",
    "type": "vless",
    "server": "167.104.219.238",
    "port": 28391,
    "region": "XX",
-   "delay_ms": 295
-  },
-  {
-   "name": "XX-025 RO_41 1015KB/s [1174d8efe1df]",
-   "type": "http",
-   "server": "193.176.84.22",
-   "port": 9002,
-   "region": "XX",
-   "delay_ms": 297
-  },
-  {
-   "name": "NL-021 NL_152 5.4MB/s P002-260618 [d77b65a8fb8a]",
-   "type": "http",
-   "server": "51.158.243.91",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 298
-  },
-  {
-   "name": "US-035 US_223 847KB/s R002-260618 [413eefe66dea]",
-   "type": "http",
-   "server": "184.188.139.2",
-   "port": 8090,
-   "region": "US",
-   "delay_ms": 299
-  },
-  {
-   "name": "FR-009 FR_35 4.4MB/s R002-260618 [ba0d00d42376]",
-   "type": "http",
-   "server": "141.94.16.4",
-   "port": 443,
-   "region": "FR",
-   "delay_ms": 300
-  },
-  {
-   "name": "DE-013 德国 DEU",
-   "type": "vless",
-   "server": "31.76.89.226",
-   "port": 443,
-   "region": "DE",
-   "delay_ms": 302
-  },
-  {
-   "name": "XX-026 CF中转_1027041695",
-   "type": "vless",
-   "server": "104.16.10.104",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 302
-  },
-  {
-   "name": "TH-002 Other_27 4.2MB/s M001-260618 [e9a29050df4a]",
-   "type": "socks5",
-   "server": "77.221.148.116",
-   "port": 10808,
-   "region": "TH",
-   "delay_ms": 303
-  },
-  {
-   "name": "IT-006 IT_8 2.1MB/s R002-260618 [694b381cb66f]",
-   "type": "http",
-   "server": "95.229.15.89",
-   "port": 443,
-   "region": "IT",
-   "delay_ms": 305
-  },
-  {
-   "name": "FR-010 FR_20 1.5MB/s R002-260618 [df04adae01b8]",
-   "type": "http",
-   "server": "31.32.19.111",
-   "port": 8081,
-   "region": "FR",
-   "delay_ms": 307
-  },
-  {
-   "name": "NL-022 NL_87 6.2MB/s R002-260618 [429686735a0f]",
-   "type": "http",
-   "server": "51.159.225.197",
-   "port": 19362,
-   "region": "NL",
-   "delay_ms": 308
-  },
-  {
-   "name": "FR-011 FR_262 895KB/s K001-260618 [af44a4a293e5]",
-   "type": "http",
-   "server": "31.32.19.111",
-   "port": 8081,
-   "region": "FR",
-   "delay_ms": 309
-  },
-  {
-   "name": "SE-002 SE_1 2.4MB/s R002-260618 [b12d31712e56]",
-   "type": "http",
-   "server": "217.210.129.243",
-   "port": 443,
-   "region": "SE",
-   "delay_ms": 309
+   "delay_ms": 282,
+   "verify": {
+    "gstatic": 287,
+    "google": 282,
+    "yt": 279
+   }
   },
   {
    "name": "BR-001 巴西_102704107",
@@ -1219,31 +1371,285 @@
    "server": "201.24.121.243",
    "port": 443,
    "region": "BR",
-   "delay_ms": 313
+   "delay_ms": 282,
+   "verify": {
+    "gstatic": 295,
+    "google": 282,
+    "yt": 282
+   }
   },
   {
-   "name": "DE-014 DE_24 498KB/s R002-260618 [266849609edd]",
-   "type": "http",
-   "server": "77.221.136.60",
-   "port": 8443,
-   "region": "DE",
-   "delay_ms": 315
-  },
-  {
-   "name": "FR-012 FR_11 1.1MB/s R002-260618 [e85281f2352e]",
-   "type": "http",
-   "server": "82.96.128.175",
-   "port": 8090,
-   "region": "FR",
-   "delay_ms": 318
-  },
-  {
-   "name": "US-036 US(AzadNet.t.me)",
+   "name": "IT-003 IT意大利(mibei77.com 米贝节点分享)",
    "type": "ss",
-   "server": "69.84.182.16",
-   "port": 443,
+   "server": "202.50.253.90",
+   "port": 19999,
+   "region": "IT",
+   "delay_ms": 284,
+   "verify": {
+    "gstatic": 602,
+    "google": 284,
+    "yt": 286
+   }
+  },
+  {
+   "name": "US-031 US美国(mibei77.com 米贝节点分享)_29",
+   "type": "ss",
+   "server": "202.50.253.18",
+   "port": 19999,
    "region": "US",
-   "delay_ms": 318
+   "delay_ms": 285,
+   "verify": {
+    "gstatic": 591,
+    "google": 285,
+    "yt": 292
+   }
+  },
+  {
+   "name": "US-032 US美国(mibei77.com 米贝节点分享)_27",
+   "type": "ss",
+   "server": "202.50.253.54",
+   "port": 19999,
+   "region": "US",
+   "delay_ms": 286,
+   "verify": {
+    "gstatic": 589,
+    "google": 286,
+    "yt": 282
+   }
+  },
+  {
+   "name": "NL-018 NL_171 5.8MB/s R002-260618 [aee8d229a5b3]",
+   "type": "http",
+   "server": "84.17.47.124",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 288,
+   "verify": {
+    "gstatic": 263,
+    "google": 288,
+    "yt": 257
+   }
+  },
+  {
+   "name": "DE-010 CZ_1 2.5MB/s R002-260618 [dea96bfbdd9e]",
+   "type": "http",
+   "server": "193.35.104.196",
+   "port": 443,
+   "region": "DE",
+   "delay_ms": 288,
+   "verify": {
+    "gstatic": 289,
+    "google": 288,
+    "yt": 315
+   }
+  },
+  {
+   "name": "XX-019 EPODONIOS",
+   "type": "vless",
+   "server": "177.7.51.29",
+   "port": 8443,
+   "region": "XX",
+   "delay_ms": 288,
+   "verify": {
+    "gstatic": 292,
+    "google": 288,
+    "yt": 277
+   }
+  },
+  {
+   "name": "IT-004 IT意大利(mibei77.com 米贝节点分享)_3",
+   "type": "ss",
+   "server": "202.50.253.99",
+   "port": 19999,
+   "region": "IT",
+   "delay_ms": 288,
+   "verify": {
+    "gstatic": 595,
+    "google": 288,
+    "yt": 286
+   }
+  },
+  {
+   "name": "DE-011 LV_5 2.3MB/s R002-260618 [2933de132b5e]",
+   "type": "http",
+   "server": "185.219.159.15",
+   "port": 443,
+   "region": "DE",
+   "delay_ms": 289,
+   "verify": {
+    "gstatic": 306,
+    "google": 289,
+    "yt": 315
+   }
+  },
+  {
+   "name": "IT-005 IT意大利(mibei77.com 米贝节点分享)_2",
+   "type": "ss",
+   "server": "202.50.253.72",
+   "port": 19999,
+   "region": "IT",
+   "delay_ms": 289,
+   "verify": {
+    "gstatic": 605,
+    "google": 289,
+    "yt": 286
+   }
+  },
+  {
+   "name": "NL-019 NL_41 5.5MB/s R002-260618 [4251bc4d7d7f]",
+   "type": "http",
+   "server": "84.17.47.123",
+   "port": 9002,
+   "region": "NL",
+   "delay_ms": 291,
+   "verify": {
+    "gstatic": 284,
+    "google": 291,
+    "yt": 282
+   }
+  },
+  {
+   "name": "XX-020 RO_70 1.2MB/s R002-260618 [0a23683cba9b]",
+   "type": "http",
+   "server": "193.176.84.22",
+   "port": 9002,
+   "region": "XX",
+   "delay_ms": 292,
+   "verify": {
+    "gstatic": 288,
+    "google": 292,
+    "yt": 269
+   }
+  },
+  {
+   "name": "XX-021 RO_41 1015KB/s [1174d8efe1df]",
+   "type": "http",
+   "server": "193.176.84.22",
+   "port": 9002,
+   "region": "XX",
+   "delay_ms": 292,
+   "verify": {
+    "gstatic": 310,
+    "google": 292,
+    "yt": 271
+   }
+  },
+  {
+   "name": "US-033 US美国(mibei77.com 米贝节点分享)_30",
+   "type": "ss",
+   "server": "202.50.253.63",
+   "port": 19999,
+   "region": "US",
+   "delay_ms": 294,
+   "verify": {
+    "gstatic": 580,
+    "google": 294,
+    "yt": 284
+   }
+  },
+  {
+   "name": "US-034 US美国(mibei77.com 米贝节点分享)_28",
+   "type": "ss",
+   "server": "202.50.253.45",
+   "port": 19999,
+   "region": "US",
+   "delay_ms": 294,
+   "verify": {
+    "gstatic": 572,
+    "google": 294,
+    "yt": 279
+   }
+  },
+  {
+   "name": "US-035 US美国(mibei77.com 米贝节点分享)_26",
+   "type": "ss",
+   "server": "202.50.253.36",
+   "port": 19999,
+   "region": "US",
+   "delay_ms": 295,
+   "verify": {
+    "gstatic": 586,
+    "google": 295,
+    "yt": 291
+   }
+  },
+  {
+   "name": "DE-012 德国 DEU",
+   "type": "vless",
+   "server": "31.76.89.226",
+   "port": 443,
+   "region": "DE",
+   "delay_ms": 298,
+   "verify": {
+    "gstatic": 268,
+    "google": 298,
+    "yt": 300
+   }
+  },
+  {
+   "name": "IT-006 IT_7 2.0MB/s R002-260618 [306cbcf5a202]",
+   "type": "http",
+   "server": "94.177.163.156",
+   "port": 443,
+   "region": "IT",
+   "delay_ms": 299,
+   "verify": {
+    "gstatic": 274,
+    "google": 299,
+    "yt": 305
+   }
+  },
+  {
+   "name": "RU-004 RU_4 1.4MB/s R002-260618 [48eeca537cae]",
+   "type": "http",
+   "server": "46.29.166.134",
+   "port": 1446,
+   "region": "RU",
+   "delay_ms": 299,
+   "verify": {
+    "gstatic": 270,
+    "google": 299,
+    "yt": 324
+   }
+  },
+  {
+   "name": "NL-020 NL_152 5.4MB/s P002-260618 [d77b65a8fb8a]",
+   "type": "http",
+   "server": "51.158.243.91",
+   "port": 443,
+   "region": "NL",
+   "delay_ms": 299,
+   "verify": {
+    "gstatic": 305,
+    "google": 299,
+    "yt": 240
+   }
+  },
+  {
+   "name": "FR-012 FR_20 1.5MB/s R002-260618 [df04adae01b8]",
+   "type": "http",
+   "server": "31.32.19.111",
+   "port": 8081,
+   "region": "FR",
+   "delay_ms": 301,
+   "verify": {
+    "gstatic": 304,
+    "google": 301,
+    "yt": 312
+   }
+  },
+  {
+   "name": "NL-021 NL_87 6.2MB/s R002-260618 [429686735a0f]",
+   "type": "http",
+   "server": "51.159.225.197",
+   "port": 19362,
+   "region": "NL",
+   "delay_ms": 304,
+   "verify": {
+    "gstatic": 306,
+    "google": 304,
+    "yt": 293
+   }
   },
   {
    "name": "PL-001 PL_6 475KB/s R002-260618 [2f018fa07171]",
@@ -1251,31 +1657,64 @@
    "server": "31.186.220.204",
    "port": 443,
    "region": "PL",
-   "delay_ms": 326
+   "delay_ms": 304,
+   "verify": {
+    "gstatic": 324,
+    "google": 304,
+    "yt": 335
+   }
   },
   {
-   "name": "RU-005 俄罗斯联邦_102704142",
-   "type": "vless",
-   "server": "194.26.229.176",
-   "port": 4100,
-   "region": "RU",
-   "delay_ms": 333
-  },
-  {
-   "name": "XX-027 GR_2 722KB/s P002-260618 [51a2ba80b34d]",
+   "name": "NL-022 NL_119 6.1MB/s R002-260618 [bcf20a2004d6]",
    "type": "http",
-   "server": "149.22.85.65",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 334
+   "server": "51.159.225.196",
+   "port": 23856,
+   "region": "NL",
+   "delay_ms": 305,
+   "verify": {
+    "gstatic": 298,
+    "google": 305,
+    "yt": 303
+   }
   },
   {
-   "name": "XX-028 乌克兰 001",
-   "type": "vless",
-   "server": "213.111.148.137",
+   "name": "IT-007 IT_8 2.1MB/s R002-260618 [694b381cb66f]",
+   "type": "http",
+   "server": "95.229.15.89",
    "port": 443,
+   "region": "IT",
+   "delay_ms": 309,
+   "verify": {
+    "gstatic": 316,
+    "google": 309,
+    "yt": 335
+   }
+  },
+  {
+   "name": "US-036 US_223 847KB/s R002-260618 [413eefe66dea]",
+   "type": "http",
+   "server": "184.188.139.2",
+   "port": 8090,
+   "region": "US",
+   "delay_ms": 315,
+   "verify": {
+    "gstatic": 302,
+    "google": 315,
+    "yt": 282
+   }
+  },
+  {
+   "name": "XX-022 CZ_2 1.1MB/s R002-260618 [0dc082ba4d1d]",
+   "type": "http",
+   "server": "5.35.100.14",
+   "port": 8443,
    "region": "XX",
-   "delay_ms": 340
+   "delay_ms": 317,
+   "verify": {
+    "gstatic": 613,
+    "google": 317,
+    "yt": 314
+   }
   },
   {
    "name": "AR-004 @tootffarangi",
@@ -1283,55 +1722,25 @@
    "server": "152.53.229.84",
    "port": 443,
    "region": "AR",
-   "delay_ms": 341
+   "delay_ms": 343,
+   "verify": {
+    "gstatic": 397,
+    "google": 343,
+    "yt": 384
+   }
   },
   {
-   "name": "US-037 美国 008",
-   "type": "vless",
-   "server": "104.17.73.206",
-   "port": 8443,
-   "region": "US",
-   "delay_ms": 348
-  },
-  {
-   "name": "DE-015 DE_37 1.2MB/s R002-260618 [5221d779769c]",
+   "name": "DE-013 DE_24 498KB/s R002-260618 [266849609edd]",
    "type": "http",
-   "server": "188.120.225.125",
+   "server": "77.221.136.60",
    "port": 8443,
    "region": "DE",
-   "delay_ms": 375
-  },
-  {
-   "name": "JP-002 JP(AzadNet.t.me) (3)",
-   "type": "trojan",
-   "server": "153.121.52.154",
-   "port": 443,
-   "region": "JP",
-   "delay_ms": 380
-  },
-  {
-   "name": "XX-029 EPODONIOS",
-   "type": "vless",
-   "server": "178.250.157.231",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 384
-  },
-  {
-   "name": "ES-001 ES_5 957KB/s R002-260618 [b8079e529455]",
-   "type": "http",
-   "server": "80.24.34.107",
-   "port": 8090,
-   "region": "ES",
-   "delay_ms": 389
-  },
-  {
-   "name": "JP-003 JP(AzadNet.t.me) (6)",
-   "type": "trojan",
-   "server": "49.212.203.7",
-   "port": 443,
-   "region": "JP",
-   "delay_ms": 396
+   "delay_ms": 375,
+   "verify": {
+    "gstatic": 351,
+    "google": 375,
+    "yt": 350
+   }
   },
   {
    "name": "BR-002 BR_1 560KB/s R002-260618 [734cd2449392]",
@@ -1339,63 +1748,12 @@
    "server": "134.65.17.77",
    "port": 443,
    "region": "BR",
-   "delay_ms": 397
-  },
-  {
-   "name": "HK-004 HK(AzadNet.t.me)",
-   "type": "trojan",
-   "server": "20.255.74.102",
-   "port": 443,
-   "region": "HK",
-   "delay_ms": 407
-  },
-  {
-   "name": "RU-006 RU_3 665KB/s R002-260618 [150227d816ba]",
-   "type": "http",
-   "server": "194.186.179.62",
-   "port": 443,
-   "region": "RU",
-   "delay_ms": 409
-  },
-  {
-   "name": "TW-003 TW(AzadNet.t.me) (3)",
-   "type": "trojan",
-   "server": "60.250.152.229",
-   "port": 3462,
-   "region": "TW",
-   "delay_ms": 427
-  },
-  {
-   "name": "AU-001 AU_2 418KB/s R002-260618 [d18f850b3a6c]",
-   "type": "http",
-   "server": "159.13.44.228",
-   "port": 443,
-   "region": "AU",
-   "delay_ms": 434
-  },
-  {
-   "name": "XX-030 IR(AzadNet.t.me)",
-   "type": "ss",
-   "server": "185.188.104.10",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 539
-  },
-  {
-   "name": "XX-031 IR(AzadNet.t.me) (2)",
-   "type": "ss",
-   "server": "185.188.105.11",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 548
-  },
-  {
-   "name": "XX-032 IR(AzadNet.t.me) (3)",
-   "type": "ss",
-   "server": "185.188.106.10",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 548
+   "delay_ms": 385,
+   "verify": {
+    "gstatic": 367,
+    "google": 385,
+    "yt": 368
+   }
   },
   {
    "name": "AR-005 ar14n24b VL-TCP- XX down",
@@ -1403,199 +1761,114 @@
    "server": "94.228.167.12",
    "port": 443,
    "region": "AR",
-   "delay_ms": 550
+   "delay_ms": 408,
+   "verify": {
+    "gstatic": 373,
+    "google": 408,
+    "yt": 318
+   }
   },
   {
-   "name": "XX-033 IR(AzadNet.t.me) (1)",
-   "type": "ss",
-   "server": "185.188.104.11",
+   "name": "XX-023 CF中转_1027047273",
+   "type": "vless",
+   "server": "104.19.47.188",
+   "port": 8443,
+   "region": "XX",
+   "delay_ms": 422,
+   "verify": {
+    "gstatic": 149,
+    "google": 422,
+    "yt": 145
+   }
+  },
+  {
+   "name": "RU-005 RU_3 665KB/s R002-260618 [150227d816ba]",
+   "type": "http",
+   "server": "194.186.179.62",
+   "port": 443,
+   "region": "RU",
+   "delay_ms": 430,
+   "verify": {
+    "gstatic": 426,
+    "google": 430
+   }
+  },
+  {
+   "name": "AU-001 AU_2 418KB/s R002-260618 [d18f850b3a6c]",
+   "type": "http",
+   "server": "159.13.44.228",
+   "port": 443,
+   "region": "AU",
+   "delay_ms": 439,
+   "verify": {
+    "gstatic": 435,
+    "google": 439,
+    "yt": 412
+   }
+  },
+  {
+   "name": "XX-024 EPODONIOS",
+   "type": "vless",
+   "server": "178.250.157.231",
    "port": 443,
    "region": "XX",
-   "delay_ms": 550
+   "delay_ms": 455,
+   "verify": {
+    "gstatic": 435,
+    "google": 455
+   }
   },
   {
-   "name": "US-038 US美国(mibei77.com 米贝节点分享)_27",
-   "type": "ss",
-   "server": "202.50.253.54",
-   "port": 19999,
-   "region": "US",
-   "delay_ms": 570
+   "name": "DE-014 DE_37 1.2MB/s R002-260618 [5221d779769c]",
+   "type": "http",
+   "server": "188.120.225.125",
+   "port": 8443,
+   "region": "DE",
+   "delay_ms": 466,
+   "verify": {
+    "gstatic": 456,
+    "google": 466,
+    "yt": 448
+   }
   },
   {
-   "name": "IT-007 IT意大利(mibei77.com 米贝节点分享)_2",
-   "type": "ss",
-   "server": "202.50.253.72",
-   "port": 19999,
-   "region": "IT",
-   "delay_ms": 574
-  },
-  {
-   "name": "US-039 US美国(mibei77.com 米贝节点分享)_26",
-   "type": "ss",
-   "server": "202.50.253.36",
-   "port": 19999,
-   "region": "US",
-   "delay_ms": 582
-  },
-  {
-   "name": "US-040 US美国(mibei77.com 米贝节点分享)_29",
-   "type": "ss",
-   "server": "202.50.253.18",
-   "port": 19999,
-   "region": "US",
-   "delay_ms": 584
-  },
-  {
-   "name": "US-041 US美国(mibei77.com 米贝节点分享)_30",
-   "type": "ss",
-   "server": "202.50.253.63",
-   "port": 19999,
-   "region": "US",
-   "delay_ms": 585
-  },
-  {
-   "name": "XX-034 IR(AzadNet.t.me) (5)",
-   "type": "ss",
-   "server": "185.188.107.10",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 585
-  },
-  {
-   "name": "US-042 US美国(mibei77.com 米贝节点分享)_28",
-   "type": "ss",
-   "server": "202.50.253.45",
-   "port": 19999,
-   "region": "US",
-   "delay_ms": 591
-  },
-  {
-   "name": "IT-008 IT意大利(mibei77.com 米贝节点分享)",
-   "type": "ss",
-   "server": "202.50.253.90",
-   "port": 19999,
-   "region": "IT",
-   "delay_ms": 597
-  },
-  {
-   "name": "IT-009 IT意大利(mibei77.com 米贝节点分享)_3",
-   "type": "ss",
-   "server": "202.50.253.99",
-   "port": 19999,
-   "region": "IT",
-   "delay_ms": 623
-  },
-  {
-   "name": "US-043 US_46 291KB/s R002-260618 [681b35c5fcc0]",
+   "name": "US-037 US_46 291KB/s R002-260618 [681b35c5fcc0]",
    "type": "http",
    "server": "20.42.108.114",
    "port": 443,
    "region": "US",
-   "delay_ms": 671
+   "delay_ms": 1061,
+   "verify": {
+    "gstatic": 343,
+    "google": 1061,
+    "yt": 660
+   }
   },
   {
-   "name": "XX-035 CZ_2 1.1MB/s R002-260618 [0dc082ba4d1d]",
+   "name": "ES-001 ES_5 957KB/s R002-260618 [b8079e529455]",
    "type": "http",
-   "server": "5.35.100.14",
-   "port": 8443,
-   "region": "XX",
-   "delay_ms": 705
+   "server": "80.24.34.107",
+   "port": 8090,
+   "region": "ES",
+   "delay_ms": 1472,
+   "verify": {
+    "gstatic": 370,
+    "google": 1472,
+    "yt": 362
+   }
   },
   {
-   "name": "US-044 US美国丨yoyapai.com",
-   "type": "trojan",
-   "server": "216.24.57.7",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 709
-  },
-  {
-   "name": "XX-036 CM_1 410KB/s M001-260618 [d74f7e094503]",
+   "name": "IT-008 IT_12 870KB/s R002-260618 [680af2744477]",
    "type": "http",
-   "server": "102.244.78.61",
-   "port": 8084,
-   "region": "XX",
-   "delay_ms": 734
-  },
-  {
-   "name": "FR-013 FR(AzadNet.t.me) (10)",
-   "type": "trojan",
-   "server": "54.36.191.211",
-   "port": 443,
-   "region": "FR",
-   "delay_ms": 787
-  },
-  {
-   "name": "XX-037 CZ(AzadNet.t.me) (3)",
-   "type": "trojan",
-   "server": "195.133.93.81",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 820
-  },
-  {
-   "name": "PL-002 PL(AzadNet.t.me) (2)",
-   "type": "trojan",
-   "server": "146.59.3.14",
-   "port": 443,
-   "region": "PL",
-   "delay_ms": 828
-  },
-  {
-   "name": "US-045 US(AzadNet.t.me) (8)",
-   "type": "trojan",
-   "server": "18.65.190.65",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 882
-  },
-  {
-   "name": "CA-003 CA(AzadNet.t.me) (1)",
-   "type": "trojan",
-   "server": "159.203.22.227",
-   "port": 443,
-   "region": "CA",
-   "delay_ms": 886
-  },
-  {
-   "name": "US-046 @Hope_Net-join-us-on-Telegram",
-   "type": "trojan",
-   "server": "190.93.247.7",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 890
-  },
-  {
-   "name": "XX-038 LB(AzadNet.t.me)",
-   "type": "trojan",
-   "server": "77.110.101.210",
-   "port": 443,
-   "region": "XX",
-   "delay_ms": 965
-  },
-  {
-   "name": "NL-023 NL(AzadNet.t.me) (8)",
-   "type": "trojan",
-   "server": "142.93.226.128",
-   "port": 443,
-   "region": "NL",
-   "delay_ms": 1023
-  },
-  {
-   "name": "US-047 US-15.204.248.103-5412",
-   "type": "trojan",
-   "server": "15.204.248.103",
-   "port": 443,
-   "region": "US",
-   "delay_ms": 1233
-  },
-  {
-   "name": "FR-014 @v2ray_configs_pool®South Africa©Johannesburgping:199.98ms",
-   "type": "trojan",
-   "server": "38.54.64.247",
-   "port": 443,
-   "region": "FR",
-   "delay_ms": 1907
+   "server": "93.71.245.84",
+   "port": 8090,
+   "region": "IT",
+   "delay_ms": 2132,
+   "verify": {
+    "gstatic": 238,
+    "google": 2132,
+    "yt": 243
+   }
   }
  ]
 }

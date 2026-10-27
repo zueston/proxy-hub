@@ -120,17 +120,37 @@ function toUri(p) {
   if (t === 'anytls') {
     return `anytls://${encodeURIComponent(p.password)}@${p.server}:${p.port}#${encodeURIComponent(p.name)}`;
   }
+  if (t === 'http') {
+    const auth = p.username ? `${encodeURIComponent(p.username)}:${encodeURIComponent(p.password || '')}@` : '';
+    return `http://${auth}${p.server}:${p.port}#${encodeURIComponent(p.name)}`;
+  }
+  if (t === 'socks5' || t === 'socks') {
+    const auth = p.username ? `${encodeURIComponent(p.username)}:${encodeURIComponent(p.password || '')}@` : '';
+    return `socks5://${auth}${p.server}:${p.port}#${encodeURIComponent(p.name)}`;
+  }
   return null;
 }
 
 // ---------- 主流程 ----------
-const working = JSON.parse(fs.readFileSync(path.join(OUT, 'working.json'), 'utf8'));
+// 优先用端到端验证过的结果（_verify.google 表示真能访问被墙站点）
+const VERIFIED_PATH = path.join(OUT, 'working_verified.json');
+const useVerified = fs.existsSync(VERIFIED_PATH);
+const working = JSON.parse(fs.readFileSync(useVerified ? VERIFIED_PATH : path.join(OUT, 'working.json'), 'utf8'));
 const MIN = parseInt(process.env.MIN_DELAY || '0', 10);
 const MAX = parseInt(process.env.MAX_DELAY || '4000', 10);
 const LIMIT = parseInt(process.env.LIMIT || '600', 10);
 
+// 准入标准：能过 google generate_204 才算真能翻墙
 const picked = working
-  .filter(n => n._delay >= MIN && n._delay <= MAX)
+  .filter(n => {
+    if (useVerified) {
+      const v = n._verify || {};
+      if (!v.google) return false;              // 过不了 google 的一律不进主订阅
+      return v.google >= MIN && v.google <= MAX;
+    }
+    return n._delay >= MIN && n._delay <= MAX;
+  })
+  .sort((a, b) => (a._verify?.google || a._delay) - (b._verify?.google || b._delay))
   .slice(0, LIMIT);
 
 // 命名：REGION-类型-序号 [原始名]
@@ -142,9 +162,9 @@ const finalNodes = picked.map(n => {
   const raw = cleanName(n.name);
   const name = `${region}-${String(counters[k]).padStart(3, '0')} ${raw}`.slice(0, 80);
   const p = { ...n };
-  delete p._src; delete p._tcp; delete p._tcp_ms; delete p._delay; delete p._tested;
+  delete p._src; delete p._tcp; delete p._tcp_ms; delete p._delay; delete p._tested; delete p._verify;
   p.name = name;
-  return { proxy: p, meta: { delay: n._delay, region, raw_name: n.name, type: n.type } };
+  return { proxy: p, meta: { delay: n._verify?.google || n._delay, region, raw_name: n.name, type: n.type, verify: n._verify || null } };
 });
 
 const proxies = finalNodes.map(f => f.proxy);
@@ -228,11 +248,17 @@ fs.writeFileSync(path.join(OUT, 'base64.txt'), b64(uris.join('\n')));
 fs.writeFileSync(path.join(OUT, 'base64url.txt'), b64url(uris.join('\n')));
 
 // --- 元数据 ---
+function countJson(f) {
+  try { return JSON.parse(fs.readFileSync(path.join(OUT, f), 'utf8')).length; } catch (e) { return null; }
+}
 const meta = {
   generated_at: new Date().toISOString(),
-  total_candidates: JSON.parse(fs.readFileSync(path.join(OUT, 'candidates.json'), 'utf8')).length,
-  tcp_alive: JSON.parse(fs.readFileSync(path.join(OUT, 'tcp_alive.json'), 'utf8')).length,
+  admission: 'node must pass https://www.google.com/generate_204 through mihomo before export',
+  total_candidates: countJson('candidates.json'),
+  tcp_alive: countJson('tcp_alive.json'),
   tested_ok: working.length,
+  google_verified: working.filter(n => n._verify?.google).length,
+  youtube_verified: working.filter(n => n._verify?.yt).length,
   exported: proxies.length,
   by_type: proxies.reduce((a, p) => (a[p.type] = (a[p.type] || 0) + 1, a), {}),
   by_region: finalNodes.reduce((a, f) => (a[f.meta.region] = (a[f.meta.region] || 0) + 1, a), {}),
@@ -241,7 +267,7 @@ const meta = {
     median: finalNodes.map(f => f.meta.delay).sort((a, b) => a - b)[Math.floor(finalNodes.length / 2)],
     max: Math.max(...finalNodes.map(f => f.meta.delay)),
   },
-  nodes: finalNodes.map(f => ({ name: f.proxy.name, type: f.proxy.type, server: f.proxy.server, port: f.proxy.port, region: f.meta.region, delay_ms: f.meta.delay })),
+  nodes: finalNodes.map(f => ({ name: f.proxy.name, type: f.proxy.type, server: f.proxy.server, port: f.proxy.port, region: f.meta.region, delay_ms: f.meta.delay, verify: f.meta.verify })),
 };
 fs.writeFileSync(path.join(OUT, 'nodes.json'), JSON.stringify(meta, null, 1));
 
