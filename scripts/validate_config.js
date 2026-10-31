@@ -9,7 +9,7 @@ const BIN = process.env.MIHOMO_BIN || path.join(ROOT, 'bin', 'mihomo.exe');
 const DIR = path.join(OUT, 'validate_home');
 fs.mkdirSync(DIR, { recursive: true });
 
-const CTRL_RE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
+const CTRL_RE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/;
 function hasCtrl(v) {
   if (typeof v === 'string') return CTRL_RE.test(v);
   if (Array.isArray(v)) return v.some(hasCtrl);
@@ -108,13 +108,20 @@ for (let round = 0; round < 500; round++) {
   const r = tryConfig(list.map(o => o.p));
   if (r.ok) { console.log(`OK after ${round} rounds, ${list.length} proxies`); break; }
   const m = r.text.match(/proxy (\d+):\s*([^\n"]+)/);
-  if (!m) { console.log('UNPARSED ERROR:', r.text.slice(0, 800)); break; }
+  if (!m) {
+    // 解析不出错误位置时不能继续：否则 validated.json 会把整份未校验的列表带进 real_test，
+    // 下游只会报 "mihomo failed to start"，真正原因被埋掉。
+    console.error('UNPARSED ERROR (无法定位坏节点，终止):', r.text.slice(0, 800));
+    fs.writeFileSync(path.join(OUT, 'validate_error.txt'), r.text);
+    process.exit(1);
+  }
   const idx = parseInt(m[1], 10);
   const reason = m[2].trim();
   if (idx >= list.length) { console.log('index out of range', idx, reason); break; }
-  dropped.push({ idx, reason, type: list[idx].p.type, server: list[idx].p.server });
+  const victim = list[idx].p;
+  dropped.push({ idx, reason, type: victim.type, server: victim.server });
   list.splice(idx, 1);
-  if (round % 10 === 0) console.log(`round ${round}: drop #${idx} ${list[idx] ? list[idx].p.type : ''} :: ${reason.slice(0, 90)}  (left ${list.length})`);
+  if (round % 10 === 0) console.log(`round ${round}: drop #${idx} ${victim.type} :: ${reason.slice(0, 90)}  (left ${list.length})`);
 }
 console.log('dropped:', dropped.length);
 const rc = {};

@@ -17,7 +17,7 @@ const SUPPORTED = new Set(['ss', 'ssr', 'vmess', 'vless', 'trojan', 'hysteria', 
 // 递归清除字符串中的控制字符（YAML 不允许），保留 \t
 function clean(v) {
   if (typeof v === 'string') {
-    return v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '');
+    return v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/g, '');
   }
   if (Array.isArray(v)) return v.map(clean);
   if (v && typeof v === 'object') {
@@ -28,7 +28,7 @@ function clean(v) {
   return v;
 }
 
-const CTRL_RE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
+const CTRL_RE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/;
 function hasCtrl(v) {
   if (typeof v === 'string') return CTRL_RE.test(v);
   if (Array.isArray(v)) return v.some(hasCtrl);
